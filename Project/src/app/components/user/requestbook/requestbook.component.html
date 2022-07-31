@@ -1,0 +1,59 @@
+
+<div class="widthad">
+    <span style="color: red;" *ngIf="data.length >= 3">You Can't Request!! Already 3 books Requested</span>
+    <mat-card >
+       
+        <form [formGroup]="forms"   (ngSubmit)="onFormSubmit(forms.value)">
+            <h2>Request for Book</h2>                  
+           
+            <mat-form-field>
+                <input matInput placeholder="Enter user Name" formControlName="username"  >
+            
+                <mat-error>
+                    <span *ngIf="!forms.get('username')?.valid && forms.get('username')?.touched">User name Required</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Enter Book Name" formControlName="BookName">
+            
+                <mat-error>
+                    <span *ngIf="!forms.get('BookName')?.valid && forms.get('BookName')?.touched">Book name Required</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Enter Author Name" formControlName="Author">
+            
+                <mat-error>
+                    <span *ngIf="!forms.get('Author')?.valid && forms.get('Author')?.touched">Author name Required</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="date"  formControlName="Date"  >
+                <mat-error>
+                    <span *ngIf="!forms.get('Date')?.valid && forms.get('Date')?.touched">Date Required</span>
+                </mat-error>
+              </mat-form-field>
+          
+
+            
+            <div class="button-row">
+                <button mat-flat-button matTooltip="Request" *ngIf="data.length < 3" color="primary" type="submit" [disabled]="!forms.valid"><span class="material-symbols-sharp"
+             >send
+
+</span></button>
+            </div>
+            <div class="reset">
+                <button type="button"(click)="forms.reset()"><span class="material-icons-outlined">
+                    Reset
+                    </span></button>
+              
+                </div>
+            <div mat-dialog-actions>
+                <button mat-button mat-dialog-close>Close</button>
+              </div>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,71 @@
+<div>
+  <div class="widthad">
+    <mat-card>
+      <form [formGroup]="forms" >
+        <h2>Edit Book</h2>
+
+        <mat-form-field>
+          <input matInput placeholder="Enter Book Name" formControlName="BookName" [(ngModel)]="datas" />
+      
+          <mat-error>
+            <span *ngIf="!forms.get('BookName')?.valid && forms.get('BookName')?.touched">Name Required </span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Add image url"
+            formControlName="image"
+          />
+          <mat-error>
+            <span
+              *ngIf="!forms.get('image')?.valid && forms.get('image')?.touched"
+              >image Required</span
+            >
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Enter Author Name"
+            formControlName="Author"
+          />
+
+          <mat-error>
+            <span *ngIf="!forms.get('Author')?.valid && forms.get('Author')?.touched">Author name Required</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="date" formControlName="Date" />
+          <mat-error>
+            <span
+              *ngIf="!forms.get('Date')?.valid && forms.get('Date')?.touched">Department Required</span>
+          </mat-error>
+        </mat-form-field>
+
+        <div class="button-row">
+          <button
+            mat-flat-button
+            color="primary"
+            type="submit"
+            [disabled]="!forms.valid"
+          >
+            <span class="material-symbols-sharp " (click)='onEdit()'>Update</span>
+          </button>
+        </div>
+        <div class="reset">
+          <button type="button" (click)="forms.reset()">
+            <span class="material-icons-outlined"> Reset </span>
+          </button>
+        </div>
+        <div mat-dialog-actions>
+          <button mat-button mat-dialog-close>Close</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

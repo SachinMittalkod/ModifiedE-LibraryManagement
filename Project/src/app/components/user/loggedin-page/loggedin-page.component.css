@@ -1,0 +1,250 @@
+mat-sidenav-content{
+  height: 100vh;
+  background: transparent;
+  background-image: url('src/assets/images/09.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+}
+mat-sidenav{
+  background-color: #3f51b5;
+  width: 200px;
+  height: 100%;
+  /* position: sticky; */
+}
+mat-nav-list{
+  margin-top: 30px;
+}
+mat-nav-list>a{
+  color:white;
+  font-weight: 500;
+}
+
+
+button{
+    border-radius: 5px;
+  }
+  
+  /* .spacer{
+    flex: auto;
+  } */
+  h1{
+    text-align: center;
+    padding-top: 30px;
+    color: rgb(73, 67, 67);
+    /* font-weight: bolder; */
+    
+    font-size: 80px;
+  
+  }
+  
+  
+  a {
+    position:relative;
+    display: inline-block;
+    /* float: left; */
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 30%; /* Four links of equal widths */
+    text-align: center;
+   
+  }
+  
+  /* User Login page css */
+  
+  html,
+  .example-spacer {
+  flex: 1 1 auto;
+  }
+  button{
+  margin: 20px;
+  }
+  .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+  }
+  
+  .material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+  }
+  
+  .image{
+  
+  background-color: rgb(195, 205, 223);
+  
+  }
+  .bootstrap{
+  width: 100vw;
+  height:100vh;
+  }
+  
+  img {
+  width: 100vw;
+  height: 60vh;
+  object-fit: contain;
+  position: relative;
+  
+  margin-top: 50px;}
+  
+  
+  .movement{
+  
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  
+  }
+  .bd-example{
+  background-color: rgb(54, 59, 59);
+  }
+  
+  .background{
+    /* istockphoto-514561345-170667a */
+    background-image: url('src/assets/images/09.jpg');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* position: fixed; */
+  }
+  /* //side nav csss////////////////////////////////////////////////// */
+
+
+  .links a{
+    color: white;
+  }
+/* .toolbar{
+  position: fixed;
+  z-index:1 ;
+  width:100vw
+} */
+
+.example-card {
+  min-width: 400px;
+  display: inline-block;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+.books {
+  display: inline-block;
+}
+.width {
+  width: 300px;
+  height: 20px;
+}
+h1 {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.rows {
+  /* background-image: url("./background.jpg"); */
+  background-position: center;
+  background-size: cover;
+  height: 92vh;
+  width: 100%;
+  overflow-y: hidden;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+
+}
+
+.column {
+  float: left;
+
+  width: 30%;
+
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+
+.row {
+  margin: 0 6px;
+
+  margin-top: 50px;
+
+}
+.mat-card-actions, .mat-card-subtitle, .mat-card-content {
+
+  margin-bottom: 16px;
+  margin: 15px 0px 0px 0px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+
+  display: table;
+
+  clear: both;
+}
+
+/* Style the counter cards */
+
+mat-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+  box-sizing: border-box;
+
+  color: black;
+
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+
+    display: block;
+
+    margin-bottom: 20px;
+  }
+
+  mat-select {
+    color: black;
+  }
+}
+
+.main-container {
+  margin-left: 35%;
+}
+
+mat-label {
+  color: black !important;
+}
+
+mat-form-field {
+  background-color: grey;
+
+  border-radius: 6px;
+}
+
+.searchbox {
+
+  margin: 0px 100px;
+
+}

@@ -1,0 +1,97 @@
+
+<div class="rows">
+    <h1>Number of Books</h1>
+    <div class="input-group" class="searchbox">
+      <div class="form-outline" >   
+        <input type="text" [(ngModel)]="term" placeholder="Search by book name" class="form-control"  >
+      </div>
+      
+    </div>
+    
+    <!-- <div class="row" > -->
+     
+    <mat-card-content class="row">
+      <mat-card class="column" *ngFor="let item of users | filter:term" class="col-md-2" fxLayoutGap="5px" style="margin-left: 5px ;">
+          
+      
+      
+            <mat-card-title>{{item.BookName}}</mat-card-title>
+            
+            <img mat-card-lg-image src={{item.image}} >
+            <mat-card-content>
+              {{item.Author}}
+            </mat-card-content>
+      
+            <button mat-raised-button color="accient" >Like </button>
+            <button mat-raised-button color="primary" style="margin: 20px">share</button>
+          
+          </mat-card>
+      </mat-card-content>
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <mat-card class="example-card" *ngFor="let item of users | filter:term" class="col-md-2" fxLayoutGap="48px" >
+        <mat-card-header class="width">
+          <div mat-card-avatar></div>
+          <mat-card-title >{{item.Nameofbook}}</mat-card-title>
+          <mat-card-subtitle>Story</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{item.imageUrl}}" alt="book">
+        <mat-card-content>
+         {{item.authorname}}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card> -->
+    <!-- </div> -->
+    
+    
+    <!-- mat card -->
+    
+    
+    
+    <!-- <div class="main-container">
+      <mat-card-content class="row">
+        <mat-card class="col-4 md offset-5">
+        <h2>Search Book </h2>
+      <mat-form-field appearance="fill">
+       
+        
+        <mat-select  placeholder="Search by..." >
+          
+          <mat-option *ngFor="let book of book" [value]="book.value">
+            {{book.viewValue}}
+      
+          </mat-option>
+         
+        
+        </mat-select>
+      </mat-form-field>
+      <span>&nbsp; &nbsp;<button mat-raised-button color="primary"> Search</button></span>
+      </mat-card>
+      </mat-card-content>
+    </div> -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+     
+    
+    

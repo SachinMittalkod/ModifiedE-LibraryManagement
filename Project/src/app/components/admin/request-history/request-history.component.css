@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+  }
+  h1{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(249, 245, 245);
+  }
+  td{
+    font-family: cursive;
+  }

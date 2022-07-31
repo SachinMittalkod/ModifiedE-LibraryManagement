@@ -1,0 +1,21 @@
+<mat-card-content class="row">
+  <h1>User Requests</h1>
+  
+  <mat-card class="column" *ngFor="let item of book | filter:term" class="col-md-2" fxLayoutGap="5px" style="margin-left: 5px ;">
+        <mat-card-title>{{item.BookName}}</mat-card-title>
+        <mat-card-subtitle><span><b>User Name:-</b></span>   {{item.username}}</mat-card-subtitle>
+        <!-- <img mat-card-lg-image src={{item.image}} > -->
+        <mat-card-content>
+          {{item.Author}}
+        </mat-card-content>
+        <button mat-button><span class="material-symbols-outlined" (click)="delete(item.id)">delete</span></button>
+        <button mat-button><span class="material-symbols-outlined" style="color: blue;" (click)="accepted(item)">accept</span></button>
+      </mat-card>
+  </mat-card-content>
+
+
+  
+  
+  
+
+

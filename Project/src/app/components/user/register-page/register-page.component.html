@@ -1,0 +1,46 @@
+
+<div class="login">
+  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-icon  >person</mat-icon>
+        <mat-card-title >Registration</mat-card-title>
+      </mat-card-header>
+     
+      <form class="example-form" [formGroup]="signup" >
+       
+        <mat-card-content>
+         
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter your name" formControlName="username">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" type="email" formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Mobile No" type="text" formControlName="mobileno">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="create password" type="password" formControlName="createpassword">
+          </mat-form-field>
+          
+            <!-- <input matInput placeholder="Gender"  formControlName="mobileno" class="mb-4"> -->
+            <!-- <mat-radio-group aria-label="Select an option">
+          
+              <mat-radio-button value="1">Male</mat-radio-button>
+              <mat-radio-button value="2">Female</mat-radio-button>
+            </mat-radio-group> -->
+         
+        </mat-card-content>
+      
+        <button mat-stroked-button color="yarn" class="btn-block" (click)="register()">Register</button>
+        
+        <!-- <h4>Don't have Account? <a [routerLink]="['/register']"> Sign Up</a></h4>  -->
+     
+       
+      </form> 
+    </mat-card>
+    <router-outlet></router-outlet>
+  </div>
+  
+  </div>
