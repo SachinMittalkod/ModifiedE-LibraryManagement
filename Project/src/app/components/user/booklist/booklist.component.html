@@ -1,18 +1,10 @@
-<!-- <app-loggedin-page></app-loggedin-page> -->
-<div class="rows">
-  <h1>Number of Books</h1>
-  <div class="input-group" class="searchbox">
- 
-    <div class="form-outline" >   
-      <input type="text" [(ngModel)]="term" placeholder="Search by book name" class="form-control"  >
-    </div>
-   
-  </div>
+
+
   
 
    
-  <mat-card-content class="row" >
-    <mat-card class="column" fxFlex.xs="100%" *ngFor="let item of users | filter:term"  class="col-md-2 mat-elevation-z4" fxLayoutGap="10px" style="margin: .8rem .8rem ;">
+  <!-- <mat-card-content class="row" >
+    <mat-card class="column"  *ngFor="let item of users | filter:term"  class="col-md-2 mat-elevation-z4" fxLayoutGap="10px" style="margin: .8rem .8rem ;">
           <mat-card-title>{{item.BookName}}</mat-card-title>
           
           <img mat-card-lg-image src={{item.image}} >
@@ -32,9 +24,43 @@
         
         </mat-card>
         <router-outlet></router-outlet>
-    </mat-card-content>
+    </mat-card-content> -->
 
+    <h1>Number of Books</h1>
+    <div class="form-outline">
+      <input style="margin: 2rem;"
+        type="text"
+        [(ngModel)]="term"
+        placeholder="Search by book name"
+        class="form-control"
+      />
+    </div>
+    <div class="rows">
+   
+      <div class="input-group" class="searchbox">
 
+        <mat-card-content class="row">
+          <mat-card
+            class="column"
+            *ngFor="let item of users | filter: term"
+            class="col-md-2" fxLayoutGap="5px" style="margin-left: 5px; margin-bottom:25px; margin-right: 2rem; ">
+            <mat-card-title>{{ item.BookName }}</mat-card-title>
+    
+            <img mat-card-lg-image src="{{ item.image }}" />
+            <mat-card-content>
+              {{ item.Author }}
+            </mat-card-content>
+    
+    
+          
+          </mat-card>
+        </mat-card-content>
+      </div>
+    </div>
+    
+    
+    
+    
     
   
 

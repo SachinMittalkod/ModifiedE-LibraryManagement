@@ -1,0 +1,59 @@
+
+    <!-- <div class="rows">
+      <h1>Please Request Books You Needed</h1>
+      <div class="input-group" class="searchbox">
+        <div class="form-outline">
+          <input
+            type="text"
+            [(ngModel)]="term"
+            placeholder="Search by book name"
+            class="form-control"
+          />
+        </div>
+    
+       
+    
+        <mat-card-content class="row">
+          <mat-card
+            class="column"
+            *ngFor="let item of users | filter: term"
+            class="col-md-2" fxLayoutGap="5px" style="margin-left: 5px; margin-bottom:25px ">
+            <mat-card-title>{{ item.BookName }}</mat-card-title>
+  
+            <img mat-card-lg-image src="{{ item.image }}" />
+            <mat-card-content>
+              {{ item.Author }}
+            </mat-card-content>
+            <button mat-raised-button color="primary">Request Book</button>
+ 
+          
+          </mat-card>
+        </mat-card-content>
+      </div>
+    </div> -->
+    <h1>Request From Available Books</h1>
+    <div class="rows">
+     
+      <div class="input-group" class="searchbox">
+        <div class="form-outline">
+          <input type="text" [(ngModel)]="term" placeholder="Search by book name" class="form-control" />
+        </div>
+       
+        <mat-card-content class="row">
+   
+          <mat-card 
+            class="column" *ngFor="let item of users | filter: term"
+            class="col-md-2" fxLayoutGap="6px" style="margin-left: 4rem; margin-bottom:25px ">
+            <mat-card-title>{{ item.BookName }}</mat-card-title>
+    
+            <img mat-card-lg-image src="{{ item.image }}" />
+            <mat-card-content>
+              {{ item.Author }}
+            </mat-card-content>
+            <button mat-raised-button color="primary" (click)="requestBook(item)">Request Book</button>
+          </mat-card>
+
+        </mat-card-content>
+       
+      </div>
+    </div>

@@ -71,7 +71,7 @@ checkRole()
   {
     this.isUser=true;
     this.isAuthenticated=true;
-    this.router.navigate(['/afterlogin']);
+    this.router.navigate(['/userlanding']);
   }
   else
   {

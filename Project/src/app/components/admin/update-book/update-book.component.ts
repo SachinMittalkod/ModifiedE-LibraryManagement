@@ -61,7 +61,7 @@ export class UpdateBookComponent implements OnInit {
     this.route.onSameUrlNavigation = 'reload';
     this.route.navigate([currentUrl]);
     
-    // window.location.reload();
+   
   }
 
 

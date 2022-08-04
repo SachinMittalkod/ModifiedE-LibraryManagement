@@ -1,7 +1,7 @@
-<!-- user login page -->
-<div class="login image-fluid">
+
+<!-- <div class="login image-fluid"  fxFlexFill>
 <div class="login"  >
-  <mat-card class="box" >
+  <mat-card class="box" fxFlex="15" >
     <mat-card-header>
 
       <mat-card-title>Login </mat-card-title>
@@ -24,6 +24,7 @@
             <span *ngIf="!data.get('password')?.valid && data.get('password')?.touched">User Name Required</span>
         </mat-error>
         </mat-form-field>
+
       </mat-card-content>
     
       <button mat-stroked-button color="accent" class="btn-block"  [disabled]="!data.valid" (click)="login()" >Log in</button>
@@ -34,6 +35,49 @@
   </mat-card>
   <router-outlet></router-outlet>
 </div>
+</div> -->
+
+
+<!-- ---------------------responsive here ------------------------------------------->
+<!-- <app-navbar-master></app-navbar-master> -->
+<h1>Please Sign or Signup</h1>
+<div class="center-content">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+   
+    </mat-card-header>
+    <mat-icon style="margin:1rem 4rem 0rem 2rem" >person</mat-icon>
+   <mat-card-content>
+
+    
+        <form class="example-form" [formGroup]="data" >
+        
+          <mat-card-content>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" formControlName="username" required>
+              <mat-error>
+                <span *ngIf="!data.get('id')?.valid && data.get('id')?.touched">User Name Required</span>
+            </mat-error>
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" type="password" formControlName="createpassword" required>
+              <mat-error>
+                <span *ngIf="!data.get('password')?.valid && data.get('password')?.touched">User Name Required</span>
+            </mat-error>
+            </mat-form-field>
+    
+          </mat-card-content>
+        
+          <button mat-stroked-button color="accent" class="btn-block"  [disabled]="!data.valid" (click)="login()" >Log in</button>
+          <h4> Don't have Account?</h4>
+          <button mat-stroked-button color="primary" class="btn-block"  routerLink='/register'>Sign Up</button>
+         
+        </form> 
+    </mat-card-content>
+
+  </mat-card>
 </div>
 
 

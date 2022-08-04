@@ -27,8 +27,8 @@ export class BooksService {
   getusers(){
     return this.http.get<User[]>(this.baseUrl)
   }
-
-  public addBook(emp:any):Observable<Requestbook>{
+  // addBook
+  public postRequest(emp:any):Observable<Requestbook>{
     return this.http.post<Requestbook>(this.reqbookurl,emp);
   }
 

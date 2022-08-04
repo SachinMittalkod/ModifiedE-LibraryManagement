@@ -1,0 +1,62 @@
+
+<!-- -----------------------Admin Landing ------------------------------------------------------ -->
+
+<!-- <app-navbar-master></app-navbar-master> -->
+<mat-sidenav-container>
+    <mat-sidenav #drawer mode="side" opened class="sidenav">
+      <mat-nav-list class="links">
+      <a mat-list-item (click)="openDialog()" >Add Books<span class="material-icons">bookmark_add</span></a>
+      <a mat-list-item matBadgeColor="warn" [routerLink]="['viewrequest']" routerLinkActive="router-link-active" >User Requests
+        <mat-icon class="material-symbols-rounded" >book</mat-icon></a>
+        <a mat-list-item [routerLink]="['adminlistbooks']"
+        >List of Books<span class="material-symbols-rounded"
+          >library_books</span
+        ></a
+      >
+      <a mat-list-item [routerLink]="['requesthistory']"
+        >Request History<span class="material-symbols-rounded"
+          >library_books</span
+        ></a
+      > 
+      </mat-nav-list> 
+  
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content">
+      
+          <button type="button" mat-icon-button (click)="drawer.toggle()" color="blue">
+            <mat-icon>menu</mat-icon>
+            </button>
+           
+        <!-- <div class="toolbar">
+          <mat-toolbar color="primary" class="mat-elevation-z4">
+            <button type="button" mat-icon-button (click)="drawer.toggle()" color="">
+              <mat-icon>menu</mat-icon>
+              </button>
+
+              <span>Admin Panel</span>
+              <span class="example-spacer"></span> 
+             
+              <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" >
+                <mat-icon routerLink="/login">
+                  <span matTooltip="Logout" class="material-symbols-outlined">logout</span>
+                </mat-icon>
+              </button>
+        
+              <mat-menu #afterMenu="matMenu" xPosition="after">
+                <button mat-menu-item [routerLink]="['/viewrequest']" routerLinkActive="router-link-active" >Requests</button>  
+              </mat-menu>
+              
+             
+              </mat-toolbar>
+        </div> -->
+  
+        
+        <div class="main">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      
+    </mat-sidenav-content>  
+  </mat-sidenav-container>
+  

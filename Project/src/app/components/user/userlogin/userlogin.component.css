@@ -1,6 +1,6 @@
+/* 
 
-
-  /* User Login page css */
+ 
 
   html,
 body {
@@ -19,7 +19,7 @@ body {
   left: 0;
   right: 0;
   z-index: 2;
-  /* box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12); */
+ 
 }
 .login-wrapper {
   height: 100%;
@@ -105,12 +105,51 @@ body {
   background-image: url('../../../../assets/images/log.jpg');
   background-position: center;
   height: 100%;
-  /* background-repeat: no-repeat; */
+
   background-size: cover;
 }
 
 h4{
   padding: 20px;
   height: 40px;
+} */
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+
+  background-size: cover;
+}
+.center-content {
+    margin-top: 100px;
+    text-align: -webkit-center;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+
+}
+
+.example-full-width {
+    margin-top: 10px;
+  width: 100%;
+}
+.mat-button{
+    margin-top: 10px;
+  width: 100%;
+  color: white;
+  height: 40px;
+  background-color: #3F51B5;
+}
+
+mat-card-content{
+  margin-top: 1rem;
+}
+
+mat-card-title{
+margin-left: 8rem;
 }
 

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -52,7 +52,7 @@ data:any;
     public onFormSubmit(datas:NgForm){
       // debugger;
         if(this.no<3){
-          this.service.addBook(datas).subscribe(data=>{
+          this.service.postRequest(datas).subscribe(data=>{
             this.arryofdata=data;
          this.no++;
             console.log(this.arryofdata.id);

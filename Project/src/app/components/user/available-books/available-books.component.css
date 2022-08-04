@@ -1,0 +1,27 @@
+.rows{
+  overflow-x: hidden;
+}
+
+
+.row{
+  display: flex;
+  margin-top: 2rem;
+}
+
+mat-card{
+  border-radius: 10px;
+}
+
+h1{
+  margin-top: -2rem;
+  text-align: center;
+  color: azure;
+  font-size: 3rem;
+}
+
+.form-control{
+  width: 35%;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+

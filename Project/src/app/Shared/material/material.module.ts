@@ -15,6 +15,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 
 
@@ -36,7 +39,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatRadioModule,
     MatBadgeModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatTabsModule
   ],
   exports:[
     MatFormFieldModule,
@@ -53,7 +58,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatRadioModule,
     MatBadgeModule,
     MatPaginatorModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }

@@ -26,7 +26,7 @@ export class ViewRequestComponent implements OnInit {
   })
   }
 
-  delete(id:number){
+ public delete(id:number){
 this.service.acceptrequest(id).subscribe(res=>{
   console.log(res);
   this.service.getrequest().subscribe(resp=>{
@@ -35,10 +35,7 @@ this.service.acceptrequest(id).subscribe(res=>{
   })
   
   
-  // let currentUrl=this.route.url;
-  // this.route.routeReuseStrategy.shouldReuseRoute = () => false;
-  // this.route.onSameUrlNavigation = 'reload';
-  // this.route.navigate([currentUrl]);
+
 })
   }
 
@@ -50,10 +47,7 @@ this.service.acceptrequest(id).subscribe(res=>{
       this.posthistory=data;
       console.log(data);
 
-      // let currentUrl=this.route.url;
-      // this.route.routeReuseStrategy.shouldReuseRoute = () => false;
-      // this.route.onSameUrlNavigation = 'reload';
-      // this.route.navigate([currentUrl]);
+   
   
     })
   }

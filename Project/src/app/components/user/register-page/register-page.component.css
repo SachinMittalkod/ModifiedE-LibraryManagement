@@ -1,6 +1,6 @@
 
 
-  /* User Login page css */
+
 
   html,
 body {
@@ -30,8 +30,8 @@ body {
 }
 .box {
   position: relative;
-  top: 20%;
-  margin-left: 35%;
+
+ 
   opacity: 1;
   float: left;
   padding: 60px px 40px 60px;
@@ -61,7 +61,7 @@ body {
   top: -10px;
   background: rgba(255, 255, 255, .6);
   left: 0;
-  transform: scale(.95);
+
   -webkit-transform: scale(.95);
   -ms-transform: scale(.95);
   z-index: -1;
@@ -114,5 +114,5 @@ h4{
   height: 40px;
 }
 .mat-radio-button ~ .mat-radio-button {
-  margin-left: 16px;
+  margin-left: 5rem;
 }

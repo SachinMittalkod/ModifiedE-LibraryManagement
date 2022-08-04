@@ -1,51 +1,12 @@
-
-  .searchbox{
-   
-    margin-right: 85%;
-    padding-bottom: 25px;
-   
-   }
-  .searchbox {
-    
-    margin: 0px 100px;
-    /* width: 50rem; */
-    margin: 0rem 5rem ;
-    padding-bottom: 25px;
-  }
-
-
-  .content{
-    padding: 1rem;
-  }
-
-  .row{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-    margin-left: 5rem;
-  }
-  mat-toolbar {
-    justify-content: space-between;
+.row{
+display: flex;
+margin-left: 1rem;
+/* justify-content:space-between; */
 }
+
 h1{
-  text-align: center;
-}
-.content {
-    padding: 16px;
-}
-
-.content > mat-card {
-    margin-bottom: 16px;
-}
-
-.rows{
-  background-image: url("../../../../assets/images/background.jpg");
-  background-position: center;
-  background-size: cover;
-
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 220vh;
-  position: relative;
+    text-align: center;
+    color: azure;
+    font-size: 3vw;
+    margin-top: -2rem;
 }
