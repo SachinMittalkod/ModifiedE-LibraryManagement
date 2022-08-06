@@ -250,3 +250,11 @@ mat-form-field {
   margin: 0px 100px;
 
 }
+
+.image{
+  border-radius:6vw;
+  width: 12.4rem;
+  height: fit-content;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}

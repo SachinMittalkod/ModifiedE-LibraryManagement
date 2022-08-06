@@ -42,12 +42,23 @@
 
 <!-- <app-navbar-master></app-navbar-master> -->
 
+
 <mat-sidenav-container>
+
+
   <mat-sidenav #drawer mode="side" opened class="sidenav">
     <mat-nav-list class="links">
+ 
+      <img class="avatar mat-elevation-z4 image" src="https://booleanstrings.com/wp-content/uploads/2021/10/profile-picture-circle-hd.png" />
+     <mat-icon></mat-icon>
+      <span style="color: aqua; margin-left: 1rem; font-size: 30px;"> Welcome </span>
+      <div> <span style="color: orange; font-size: 2rem;margin:1rem 3rem;">{{name}}</span> </div>
+      <mat-divider style="color: white; margin-bottom: 20px;" ></mat-divider>
       <a mat-list-item  [routerLink]="['booklist']" routerLinkActive="router-link-active">Issued Books<span class="material-icons">library_books</span></a>
       <a mat-list-item (click)="openDialog()">Request for book</a>
       <a mat-list-item  [routerLink]="['availablebooks']" routerLinkActive="router-link-active">Available Books<span class="material-icons">library_books</span></a>
+      <a mat-list-item  matTooltip="Logout" [routerLink]="['/login']" routerLinkActive="router-link-active"  >Logout <span class="material-symbols-outlined me-1px" > logout</span></a>
+      
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
