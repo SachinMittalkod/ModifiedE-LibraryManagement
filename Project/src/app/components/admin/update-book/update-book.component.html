@@ -5,7 +5,7 @@
         <h2>Edit Book</h2>
 
         <mat-form-field>
-          <input matInput placeholder="Enter Book Name" formControlName="BookName" [(ngModel)]="datas" />
+          <input matInput placeholder="Enter Book Name" formControlName="BookName"  />
       
           <mat-error>
             <span *ngIf="!forms.get('BookName')?.valid && forms.get('BookName')?.touched">Name Required </span>

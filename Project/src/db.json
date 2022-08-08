@@ -55,25 +55,203 @@
       "id": 16
     },
     {
-      "image": "dfssds",
-      "BookName": "dfsdfdgfg",
-      "Author": "dsafdsf",
-      "Date": "2022-08-04",
+      "image": "asds",
+      "BookName": "asds",
+      "Author": "asd",
+      "Date": "2022-08-08",
       "id": 17
     },
     {
-      "image": "Mittalkod",
-      "BookName": "Sachin m ok",
-      "Author": "Badami",
-      "Date": "2022-08-04",
+      "image": "asdsad",
+      "BookName": "asd",
+      "Author": "asdsad",
+      "Date": "2022-08-17",
+      "Category": "",
       "id": 18
     },
     {
-      "image": "sdfdsf",
-      "BookName": "Done",
-      "Author": "sdfdsff",
-      "Date": "2022-08-04",
+      "image": "dfgfg",
+      "BookName": "dfgfg",
+      "Author": "dfgfdg",
+      "Date": "2022-08-16",
+      "Category": "",
       "id": 19
+    },
+    {
+      "image": "sdfdf",
+      "BookName": "sdff",
+      "Author": "sdfdsf",
+      "Date": "2022-08-20",
+      "Category": "",
+      "id": 20
+    },
+    {
+      "image": "zxcxzc",
+      "BookName": "zcx",
+      "Author": "zxczxc",
+      "Date": "2022-08-19",
+      "Category": "Education",
+      "id": 21
+    },
+    {
+      "image": "zxcxzc",
+      "BookName": "zcx",
+      "Author": "zxczxc",
+      "Date": "2022-08-19",
+      "Category": "Poems",
+      "id": 22
+    },
+    {
+      "image": "zxcxc",
+      "BookName": "zcvxc",
+      "Author": "zxcxzc",
+      "Date": "2022-08-09",
+      "Category": "",
+      "id": 23
+    },
+    {
+      "image": "zxcxc",
+      "BookName": "zcvxc",
+      "Author": "zxcxzc",
+      "Date": "2022-08-09",
+      "Category": "",
+      "id": 24
+    },
+    {
+      "image": "ZXcxv",
+      "BookName": "ZXzX",
+      "Author": "fgh",
+      "Date": "2022-08-08",
+      "Category": "Education",
+      "id": 25
+    },
+    {
+      "image": "fghg",
+      "BookName": "fghg",
+      "Author": "fngh",
+      "Date": "2022-08-20",
+      "Category": "Education",
+      "id": 26
+    },
+    {
+      "image": "sdfsd",
+      "BookName": "sdfdf",
+      "Author": "sdfd",
+      "Date": "2022-08-09",
+      "Category": "Poems",
+      "id": 27
+    },
+    {
+      "image": "dfg",
+      "BookName": "dfgf",
+      "Author": "dfg",
+      "Date": "2022-08-18",
+      "Category": "Education",
+      "id": 28
+    },
+    {
+      "image": "asdsd",
+      "BookName": "sdsadsasd",
+      "Author": "asdsad",
+      "Date": "2022-08-16",
+      "Category": "Education",
+      "id": 29
+    },
+    {
+      "image": "fghg",
+      "BookName": "fgdh",
+      "Author": "Mittal",
+      "Date": "2022-08-08",
+      "Category": "Education",
+      "id": 30
+    },
+    {
+      "image": "sdfd",
+      "BookName": "sdff",
+      "Author": "sdf",
+      "Date": "2022-08-08",
+      "Category": "Poems",
+      "id": 31
+    },
+    {
+      "image": "sdfd",
+      "BookName": "sdfd",
+      "Author": "sdfd",
+      "Date": "2022-08-08",
+      "Category": "Poems",
+      "id": 32
+    },
+    {
+      "image": "fgh",
+      "BookName": "fgfgh",
+      "Author": "fgh",
+      "Date": "2022-08-09",
+      "Category": "Poems",
+      "id": 33
+    },
+    {
+      "image": "sdfd",
+      "BookName": "dsf",
+      "Author": "sdf",
+      "Date": "2022-08-17",
+      "Category": "Poems",
+      "id": 34
+    },
+    {
+      "image": "sdfd",
+      "BookName": "sdf",
+      "Author": "sdf",
+      "Date": "2022-08-19",
+      "Category": "Poems",
+      "id": 35
+    },
+    {
+      "image": "sdf",
+      "BookName": "dsfsd",
+      "Author": "sdf",
+      "Date": "2022-08-19",
+      "Category": "Poems",
+      "id": 36
+    },
+    {
+      "image": "fgh",
+      "BookName": "fgh",
+      "Author": "fgh",
+      "Date": "2022-08-19",
+      "Category": "Poems",
+      "id": 37
+    },
+    {
+      "image": "xcvcv",
+      "BookName": "xcv",
+      "Author": "xcv",
+      "Date": "2022-08-09",
+      "Category": "Poems",
+      "id": 38
+    },
+    {
+      "image": "dfgf",
+      "BookName": "dfg",
+      "Author": "dfgf",
+      "Date": "2022-08-08",
+      "Category": "Poems",
+      "id": 39
+    },
+    {
+      "image": "dfgf",
+      "BookName": "dfgfg",
+      "Author": "dfgfdg",
+      "Date": "2022-08-09",
+      "Category": "Poems",
+      "id": 40
+    },
+    {
+      "image": "sdf",
+      "BookName": "sdfsf",
+      "Author": "sdf",
+      "Date": "2022-08-08",
+      "Category": "Poems",
+      "id": 41
     }
   ],
   "signupuser": [
@@ -147,6 +325,13 @@
       "Author": "dgfgdfg",
       "Date": "2022-07-31",
       "id": 16
+    },
+    {
+      "username": "sachin",
+      "BookName": "cvbvcb",
+      "Author": "sachin",
+      "Date": "2022-08-08",
+      "id": 17
     }
   ],
   "reqhistory": [
@@ -220,5 +405,7 @@
       "Date": "2022-07-27",
       "id": 10
     }
-  ]
+  ],
+  "poems": [],
+  "education": []
 }

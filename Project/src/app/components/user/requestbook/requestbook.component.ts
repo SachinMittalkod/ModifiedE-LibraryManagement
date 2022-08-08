@@ -51,6 +51,7 @@ data:any;
 
     public onFormSubmit(datas:NgForm){
       // debugger;
+  
         if(this.no<3){
           this.service.postRequest(datas).subscribe(data=>{
             this.arryofdata=data;

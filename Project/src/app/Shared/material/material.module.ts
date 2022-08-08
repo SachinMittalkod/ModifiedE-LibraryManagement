@@ -18,8 +18,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
-
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [],
@@ -42,7 +42,10 @@ import {MatDividerModule} from '@angular/material/divider';
     MatTooltipModule,
     MatSnackBarModule,
     MatTabsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatExpansionModule,
+    MatSelectModule
+   
   ],
   exports:[
     MatFormFieldModule,
@@ -62,7 +65,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatTooltipModule,
     MatSnackBarModule,
     MatTabsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatExpansionModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }

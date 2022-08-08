@@ -15,7 +15,7 @@ import { BooklistComponent } from './components/user/booklist/booklist.component
 import { IssuedBooksComponent } from './components/user/issued-books/issued-books.component';
 import { RequestHistoryComponent } from './components/admin/request-history/request-history.component';
 import { AdminLandingPagesComponent } from './components/admin/admin-landing-pages/admin-landing-pages.component';
-import { NavbarMasterComponent } from './shared/navbar-master/navbar-master.component';
+import { NavbarMasterComponent } from './shared/navbar/navbar-master.component';
 import { HomeComponent } from './components/home/home.component';
 import { GaurdGuard } from './shared/gaurd.guard';
 import { AvailableBooksComponent } from './components/user/available-books/available-books.component';
@@ -42,7 +42,7 @@ const routes: Routes = [
  
   {path:'addbook', component:AddbookComponent},
   {path:'register',component:RegisterPageComponent},
-  {path:'update', component:UpdateBookComponent},
+  {path:'update/:id', component:UpdateBookComponent},
 
   
   // canActivate:[GaurdGuard] ,

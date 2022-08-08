@@ -34,14 +34,23 @@
             <mat-form-field>
                 <input matInput type="date"  formControlName="Date">
                 <mat-error>
-                    <span *ngIf="!forms.get('Date')?.valid && forms.get('Date')?.touched">Department Required</span>
+                    <span *ngIf="!forms.get('Date')?.valid && forms.get('Date')?.touched">Date Required</span>
                 </mat-error>
               </mat-form-field>
           
+              <mat-form-field >
+                <!-- <mat-label>Cars</mat-label> -->
+                <select matNativeControl required formControlName="Category" placeholder="Select Category">
+           
+                  <option value="Poems">Poems</option>
+                  <option value="Education">Education</option> 
+                </select>
+            
+              </mat-form-field>
 
             
             <div class="button-row">
-                <button mat-flat-button color="primary" type="submit" [disabled]="!forms.valid"><span class="material-symbols-sharp">send</span></button>
+                <button mat-flat-button color="primary" type="submit" [disabled]="!forms.valid"><span class="material-symbols-sharp" >send</span></button>
             </div>
             <div class="reset">
             <button type="button"(click)="forms.reset()"><span class="material-icons-outlined">

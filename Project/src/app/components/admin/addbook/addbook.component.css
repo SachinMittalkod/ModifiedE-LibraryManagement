@@ -68,7 +68,7 @@ mat-sidenav {
 	cursor: pointer;
   }
 
-  mat-card {max-width: 400px;margin: 7em auto;text-align: center;}mat-form-field {display: block;}
+  mat-card {max-width: 400px;margin: 2rem auto;text-align: center;}mat-form-field {display: block;}
   
  .active{
 	 color: lightcoral;
@@ -91,3 +91,4 @@ mat-sidenav {
 	top: 50px;
 	margin-left: 80%;
 }
+

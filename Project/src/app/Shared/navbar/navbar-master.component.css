@@ -197,6 +197,7 @@ mat-toolbar{
     position: sticky;
     overflow: hidden;
     z-index: 1;
+    /* color: #FBc02D; */
 }
 
 .Heading{

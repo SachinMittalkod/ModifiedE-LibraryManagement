@@ -3,5 +3,6 @@ export class Adminaddbook{
     image:string;
     BookName:string;
     Author:string;
-    Date:string;   
+    Date:string;  
+    Category:string; 
 }

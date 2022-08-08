@@ -29,9 +29,10 @@ import { LoginPageComponent } from './components/user/login-page/login-page.comp
 import { AvailableBooksComponent } from './components/user/available-books/available-books.component';
 import { AdminLandingPagesComponent } from './components/admin/admin-landing-pages/admin-landing-pages.component';
 import { HomeComponent } from './components/home/home.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { NavbarMasterComponent } from './shared/navbar-master/navbar-master.component';
+
+import { NavbarMasterComponent } from './shared/navbar/navbar-master.component';
 import { MaterialModule } from './shared/material/material.module';
+import { HighlightDirective } from './shared/custom-directive/highlight.directive';
 
 
 
@@ -45,7 +46,7 @@ import { MaterialModule } from './shared/material/material.module';
     PagenotfoundComponent,
 
     
-    NavbarComponent,
+  
     BooklistComponent,
     RequestbookComponent,
 
@@ -62,6 +63,7 @@ import { MaterialModule } from './shared/material/material.module';
     AvailableBooksComponent,
     AdminLandingPagesComponent,
     HomeComponent,
+    HighlightDirective,
 
   ],
   imports: [
