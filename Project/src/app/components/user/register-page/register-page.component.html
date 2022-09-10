@@ -1,5 +1,5 @@
 
-<!-- <app-navbar-master></app-navbar-master> -->
+
 
 <div class="login">
   <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
@@ -26,12 +26,17 @@
             <input matInput placeholder="create password" type="password" formControlName="createpassword">
           </mat-form-field>
           
-            <!-- <input matInput placeholder="Gender"  formControlName="mobileno" class="mb-4"> -->
-            <!-- <mat-radio-group aria-label="Select an option">
-          
-              <mat-radio-button value="1">Male</mat-radio-button>
-              <mat-radio-button value="2">Female</mat-radio-button>
-            </mat-radio-group> -->
+        
+         <div>
+          <mat-label>Gender </mat-label>
+
+         </div>
+             
+              <mat-radio-group aria-label="select an option" formControlName="gender">
+                <mat-radio-button value="Male">Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
+              </mat-radio-group>
+           
          
         </mat-card-content>
       

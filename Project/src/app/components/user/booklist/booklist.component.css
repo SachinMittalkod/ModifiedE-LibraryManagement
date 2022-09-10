@@ -10,3 +10,11 @@ h1{
     font-size: 3vw;
     margin-top: -2rem;
 }
+mat-card{
+    width: 14rem;
+}
+
+.form-outline{
+
+    margin-right: 40rem;
+    }

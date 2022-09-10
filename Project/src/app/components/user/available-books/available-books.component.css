@@ -6,10 +6,12 @@
 .row{
   display: flex;
   margin-top: 2rem;
+ 
 }
 
 mat-card{
   border-radius: 10px;
+  width: 14rem;
 }
 
 h1{

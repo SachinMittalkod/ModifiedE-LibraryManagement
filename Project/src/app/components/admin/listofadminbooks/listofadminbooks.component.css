@@ -1,8 +1,15 @@
+*{
+  overflow: hidden;
+}
+
+
+
 .row{
   display: flex;
   flex-direction: row;
   margin: 3rem 2rem;
   padding-right: 1rem;
+  /* overflow: hidden; */
 }
 h1{
   margin-top: -3rem;
@@ -11,9 +18,7 @@ h1{
   color: azure;
 }
 
-.row{
-  overflow-y: hidden;
-}
+
 .card{
   margin: 10rem;
 }
@@ -21,4 +26,11 @@ h1{
 
   margin: 0rem 60px;
  
+}
+mat-card{
+  width: 14rem;
+}
+
+img,mat-card-title{
+  margin: 10px 0px;
 }

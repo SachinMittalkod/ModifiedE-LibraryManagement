@@ -5,4 +5,5 @@ export class Registration {
     mobileno:string;
     role:string;
     createpassword:string;
+    gender:string;
 }

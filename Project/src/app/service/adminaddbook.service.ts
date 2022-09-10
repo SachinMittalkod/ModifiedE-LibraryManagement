@@ -21,6 +21,9 @@ export class AdminaddbookService {
   public getAdminBook(){
     return this.http.get<any>(this.adminaddurl);
   }
+
+  
+
   public deleteAdminBook(id:number){
     const url=`${this.adminaddurl}/${id}`
    return  this.http.delete<Adminaddbook>(url);

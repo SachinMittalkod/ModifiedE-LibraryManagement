@@ -21,7 +21,7 @@ export class AdminLandingPagesComponent implements OnInit {
   openDialog(){
     this.dialog.open(AddbookComponent, {
   
-      height:'550px'
+      // height:'550px'
       
      });
   }

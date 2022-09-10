@@ -9,3 +9,14 @@ table {
   td{
     font-family: cursive;
   }
+  .historyTable{
+    margin: 0rem 3rem;
+    text-align: center;
+  }
+
+  .head{
+    text-align: center;
+  
+    font-size:larger;
+    font-weight: bolder;
+  }

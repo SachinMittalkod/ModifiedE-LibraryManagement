@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BooksService } from 'src/app/service/books.service';
 import { NotificationService } from 'src/app/service/notification.service';
@@ -21,7 +21,8 @@ export class RegisterPageComponent implements OnInit {
       email:[""],
       mobileno:[""],
       createpassword:[""],
-      role:['user']
+      role:['user'],
+      gender:[""]
     })
   
   }

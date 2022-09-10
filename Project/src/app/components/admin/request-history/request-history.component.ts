@@ -16,7 +16,7 @@ export class RequestHistoryComponent implements OnInit {
   reqbookdata:any;
   history:any;
   
-  displayedColumns: any[] = ['username','Author', 'BookName', 'Date', ];
+  displayedColumns: any[] = ['Slno','username','Author', 'BookName', 'Date', ];
 
 
   dataSource: MatTableDataSource<any>;

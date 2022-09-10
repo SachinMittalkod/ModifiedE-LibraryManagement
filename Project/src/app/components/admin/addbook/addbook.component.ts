@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, RequiredValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AdminaddbookService } from 'src/app/service/adminaddbook.service';
@@ -15,6 +15,7 @@ import { NotificationService } from 'src/app/service/notification.service';
 export class AddbookComponent implements OnInit {
   forms: FormGroup;
   arryofdata:any=[];
+  cat:string="poem"
   constructor(private fb:FormBuilder, private service:BooksService, private route:Router,
     private notifiservice:NotificationService, private services:AdminaddbookService,
     private toastr: ToastrService, private categoryService:CategoryService) { }
@@ -29,9 +30,10 @@ export class AddbookComponent implements OnInit {
 
     })
   }
+
+
   public onFormSubmit(forms:NgForm){
     console.log(forms);  
- 
 
     this.services.postAdminBook(forms).subscribe(data=>{
       this.arryofdata=data;
@@ -40,6 +42,7 @@ export class AddbookComponent implements OnInit {
         positionClass: 'toast-top-center'
       });
       // this.notifiservice.showSuccess("You Have Added Book","Successfully")
+      
 
     })
       }

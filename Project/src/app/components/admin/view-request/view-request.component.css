@@ -10,3 +10,11 @@ h1{
     color: azure;
 
 }
+mat-card{
+    width: 18rem;
+}
+
+img,mat-card-content,mat-card-title{
+    margin:5px 3rem;
+    
+}

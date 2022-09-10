@@ -4,7 +4,7 @@
   
   <mat-card class="column" *ngFor="let item of book | filter:term" class="col-md-2" fxLayoutGap="4px" style="margin-left: 4rem ;">
         <mat-card-title>{{item.BookName}}</mat-card-title>
-        <mat-card-subtitle><span><b>User Name:-</b></span>   {{item.username}}</mat-card-subtitle>
+        <!-- <mat-card-subtitle><span><b>User Name:-</b></span>{{item.username}}</mat-card-subtitle> -->
         <img mat-card-lg-image src={{item.image}} >
         <mat-card-content>
           {{item.Author}}

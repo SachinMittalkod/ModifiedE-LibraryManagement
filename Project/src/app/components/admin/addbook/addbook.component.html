@@ -1,5 +1,4 @@
 
-<!-- (ngSubmit)="onFormSubmit(forms.value)" -->
 <div class="widthad">
     <mat-card >
         <form [formGroup]="forms" (ngSubmit)="onFormSubmit(forms.value)" >
@@ -39,7 +38,7 @@
               </mat-form-field>
           
               <mat-form-field >
-                <!-- <mat-label>Cars</mat-label> -->
+                
                 <select matNativeControl required formControlName="Category" placeholder="Select Category">
            
                   <option value="Poems">Poems</option>
@@ -53,7 +52,7 @@
                 <button mat-flat-button color="primary" type="submit" [disabled]="!forms.valid"><span class="material-symbols-sharp" >send</span></button>
             </div>
             <div class="reset">
-            <button type="button"(click)="forms.reset()"><span class="material-icons-outlined">
+            <button type="button" (click)="forms.reset()"><span class="material-icons-outlined">
                 Reset
                 </span></button>
           

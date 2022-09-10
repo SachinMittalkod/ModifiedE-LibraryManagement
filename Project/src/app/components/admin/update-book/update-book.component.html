@@ -48,13 +48,14 @@
         </mat-form-field>
 
         <div class="button-row">
-          <button
+          <button matTooltip=" Click to Update" 
             mat-flat-button
             color="primary"
             type="submit"
             [disabled]="!forms.valid"
           >
-            <span class="material-symbols-sharp " (click)='onEdit()'>Update</span>
+          <!-- class="material-symbols-sharp "  -->
+            <span (click)='onEdit()'>Update</span>
           </button>
         </div>
         <div class="reset">

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/service/auth.service';
@@ -32,7 +32,7 @@ export class UserloginComponent implements OnInit {
       })
   }
   public login(){
-    // debugger;
+ 
     this.nameon=this.authservice.authenticateEmployee(this.data.value);
     localStorage.setItem('username', this.data.value.username);
   }
