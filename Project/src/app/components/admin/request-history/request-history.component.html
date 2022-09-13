@@ -39,4 +39,17 @@
     <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" aria-label="Select page of users"></mat-paginator>
 
   </div>
+
+  <ag-grid-angular
+  style="width: 80%; height: 250px; margin: 0px 60px;"
+  class="ag-theme-alpine-dark"
+  [rowData]="history"
+  [columnDefs]="colDefs"
+  [defaultColDef]="defaultColDef"
+  [pagination]="true"
+  [paginationPageSize]="6"
+  [animateRows]="true"
+  >
+
+  </ag-grid-angular>
   

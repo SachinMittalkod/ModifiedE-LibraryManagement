@@ -5,6 +5,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { Requestbook } from 'src/app/model/requestbook.model';
 import { MatSort } from '@angular/material/sort';
+import { ColDef } from 'ag-grid-community';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { MatSort } from '@angular/material/sort';
 export class RequestHistoryComponent implements OnInit {
   reqbookdata:any;
   history:any;
-  
+  rowData:any;
   displayedColumns: any[] = ['Slno','username','Author', 'BookName', 'Date', ];
 
 
@@ -27,6 +28,8 @@ export class RequestHistoryComponent implements OnInit {
   ngOnInit(): void {
     this.service.getrequest().subscribe(data=>{
       this.reqbookdata=data;
+      this.rowData=data;
+      console.log(this.rowData);
       console.log(this.reqbookdata);
     })
 
@@ -39,6 +42,39 @@ export class RequestHistoryComponent implements OnInit {
       console.log(this.history);
     })
   }
+//Static Data Implementaion of Ag-grid
+
+  // rowData:any[]=[
+  //   {make:'TATA', model:'Nexon', price:35000},
+  //   {make:'Ford', model:'Mondeo', price:20000},
+  //   {make:'Hyndai', model:'Creta', price:18000},
+  //   {make:'Porshe', model:'Boxster', price:63000},
+  //   {make:'Porshe', model:'Boxster', price:59000},
+  //   {make:'Porshe', model:'Boxster', price:67000},
+  //   {make:'Porshe', model:'Boxster', price:53000},
+  //   {make:'Porshe', model:'Boxster', price:98000},
+  //   {make:'Porshe', model:'Boxster', price:73000}
+  // ];
+  
+  
+  // colDefs: ColDef[]=[
+  //   {field:'make'},
+  //   {field:'model'},
+  //   {field:'price'},
+  // ]; 
+
+  defaultColDef:ColDef=
+    {sortable:true, filter:true}
+
+  //Dynamic implementation
+  colDefs:any=[
+    {headerName:'Sl.No', field: 'id',height:20},
+    {headerName:'User Name', field: 'username'},
+    {headerName:'Author', field: 'Author'},
+    {headerName:'Book Name', field: 'BookName'},
+    {headerName:'Date', field: 'Date'}   
+  ] 
+ 
 
 
 }

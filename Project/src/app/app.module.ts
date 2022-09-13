@@ -30,6 +30,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarMasterComponent } from './shared/navbar/navbar-master.component';
 import { HighlightDirective } from './shared/custom-directive/highlight.directive';
 import { MaterialModule } from './shared/material/material.module';
+import { AgGridModule } from 'ag-grid-angular';
 
 
 
@@ -58,6 +59,7 @@ import { MaterialModule } from './shared/material/material.module';
     HighlightDirective,
   ],
   imports: [
+    AgGridModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -68,12 +70,21 @@ import { MaterialModule } from './shared/material/material.module';
     Ng2SearchPipeModule,
     ToastrModule.forRoot(),
     FlexLayoutModule,
-    MaterialModule    
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+
+
+
+
+
+
 
 
 

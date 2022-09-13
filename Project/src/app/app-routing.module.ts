@@ -17,7 +17,6 @@ import { RequestHistoryComponent } from './components/admin/request-history/requ
 import { AdminLandingPagesComponent } from './components/admin/admin-landing-pages/admin-landing-pages.component';
 import { NavbarMasterComponent } from './shared/navbar/navbar-master.component';
 import { HomeComponent } from './components/home/home.component';
-import { GaurdGuard } from './shared/gaurd.guard';
 import { AvailableBooksComponent } from './components/user/available-books/available-books.component';
 
 
@@ -51,9 +50,7 @@ const routes: Routes = [
     {path:'adminlistbooks' , component:ListofadminbooksComponent},
     {path:'viewrequest', component:ViewRequestComponent},
   {path:'requesthistory', component:RequestHistoryComponent}]},
-  // {path:'viewrequest', component:ViewRequestComponent},
   {path:'adminviewbook', component:AdminViewBooksComponent},
-  // {path:'adminlistbooks' , component:ListofadminbooksComponent},
   {path:'**',component:PagenotfoundComponent},
   
 ];
