@@ -257,4 +257,13 @@ mat-form-field {
   height: fit-content;
   margin-top: -1rem;
   margin-bottom: 1rem;
+
+
+
 }
+
+  /* changes */
+
+  .image{
+    height: 200px;
+  }

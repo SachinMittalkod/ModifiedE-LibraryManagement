@@ -12,18 +12,22 @@ import { AdminaddbookService } from 'src/app/service/adminaddbook.service';
 
 
 export class BooklistComponent implements OnInit {
+  date:any;
   term:string="";
+  reqdate:Date;
 column=["id","image","BookName" ,"author" ,"imageUrl"]
   constructor(private service:BooksService, private adminservice:AdminaddbookService) { }
 users:Requestbook[]=[];
+
 today= new Date();
 
 tomorrow = new Date(this.today.getTime() + (168 * 60 * 60 * 1000));
-
-  ngOnInit(): void {
-  
+  ngOnInit(): void {  
     this.adminservice.getAdminBook().subscribe((response)=>{
       this.users=response;
+      var reqDate=this.users
+      console.log(this.users);
     })
-  }
+  } 
 }
+

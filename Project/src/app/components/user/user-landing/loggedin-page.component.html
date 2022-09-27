@@ -50,28 +50,29 @@
     <mat-nav-list class="links">
  
       <img class="avatar mat-elevation-z4 image" src="https://booleanstrings.com/wp-content/uploads/2021/10/profile-picture-circle-hd.png" />
-     <mat-icon style="margin-top: -8rem;">edit</mat-icon>
+      <!-- <img class="avatar mat-elevation-z4 image" src="url" /> -->
+      <mat-icon style="margin-top: -8rem;">edit </mat-icon>
+     
      
       <span style="color: aqua; margin-left: 1rem; font-size: 30px;"> Welcome </span>
       <div> <span style="color: orange; font-size: 2rem;margin:1rem 3rem;">{{name}}</span> </div>
       <mat-divider style="color: white; margin-bottom: 20px;" ></mat-divider>
       <a mat-list-item  [routerLink]="['booklist']" routerLinkActive="router-link-active"><span class="material-icons me-2">library_books</span>Issued Books</a>
       <a mat-list-item (click)="openDialog()">Request for book</a>
-      <a mat-list-item [matMenuTriggerFor]="animals" [routerLink]="['availablebooks']" routerLinkActive="router-link-active"><span class="material-icons me-2">library_books</span>Available Books</a>
-      <a mat-list-item  matTooltip="Logout" [routerLink]="['/login']" routerLinkActive="router-link-active"><span class="material-symbols-outlined me-2" > logout</span>Logout </a>
-      
+      <a mat-list-item  [routerLink]="['availablebooks']" routerLinkActive="router-link-active"><span class="material-icons me-2">library_books</span>Available Books</a>
+      <a mat-list-item  matTooltip="Logout" [routerLink]="['/login']" routerLinkActive="router-link-active"><span class="material-symbols-outlined me-2" > logout</span>Logout </a>      
     </mat-nav-list>
  
     <mat-menu #animals="matMenu">
-  <button mat-menu-item style="overflow-x: hidden;" [matMenuTriggerFor]="vertebrates">Category</button>
+
 
 </mat-menu>
 
-<mat-menu #vertebrates="matMenu" style="overflow-x: hidden;">
+<!-- <mat-menu #vertebrates="matMenu" style="overflow-x: hidden;">
   <button mat-menu-item>POEMS</button>
   <button mat-menu-item>EDUCATION</button>
   <button mat-menu-item>NOVELS</button>
-</mat-menu>
+</mat-menu> -->
 
 <mat-menu #invertebrates="matMenu">
   <button mat-menu-item>Insects</button>

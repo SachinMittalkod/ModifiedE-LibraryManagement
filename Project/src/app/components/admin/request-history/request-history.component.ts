@@ -8,6 +8,7 @@ import { MatSort } from '@angular/material/sort';
 import { ColDef } from 'ag-grid-community';
 
 
+
 @Component({
   selector: 'app-request-history',
   templateUrl: './request-history.component.html',
@@ -68,7 +69,7 @@ export class RequestHistoryComponent implements OnInit {
 
   //Dynamic implementation
   colDefs:any=[
-    {headerName:'Sl.No', field: 'id',height:20},
+    {headerName:'Sl.No', field: 'id',  },
     {headerName:'User Name', field: 'username'},
     {headerName:'Author', field: 'Author'},
     {headerName:'Book Name', field: 'BookName'},

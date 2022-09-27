@@ -21,7 +21,7 @@ export class RegisterPageComponent implements OnInit {
       email:[""],
       mobileno:[""],
       createpassword:[""],
-      role:['user'],
+      role:['2'],
       gender:[""]
     })
   

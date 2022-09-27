@@ -20,4 +20,7 @@ table {
     font-size:larger;
     font-weight: bolder;
   }
-
+h1{
+  font-size: 3rem;
+  color: aqua;
+}

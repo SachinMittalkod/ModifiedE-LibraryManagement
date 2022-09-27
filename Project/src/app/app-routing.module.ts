@@ -18,6 +18,7 @@ import { AdminLandingPagesComponent } from './components/admin/admin-landing-pag
 import { NavbarMasterComponent } from './shared/navbar/navbar-master.component';
 import { HomeComponent } from './components/home/home.component';
 import { AvailableBooksComponent } from './components/user/available-books/available-books.component';
+import { GaurdGuard } from './shared/gaurd.guard';
 
 
 
@@ -28,7 +29,7 @@ const routes: Routes = [
   {path: '', redirectTo:'login' ,pathMatch:'full'},
   // {path:'home',component:NavbarComponent, }, 
   {path:'home',component:NavbarMasterComponent,children:[{path:'mainhome', component:HomeComponent}] }, 
-  {path:'adminlogin',component:AdminLoginComponent},
+  {path:'adminlogin',component:AdminLoginComponent,canActivate:[GaurdGuard]}, 
   {path:'login',component:UserloginComponent},  
   {path:'userlanding', component:LoggedinPageComponent, children:[
     // canActivate:[GaurdGuard], 
@@ -45,7 +46,7 @@ const routes: Routes = [
 
   
   // canActivate:[GaurdGuard] ,
-  {path:'adminlanding', component:AdminLandingPagesComponent, children:[
+  {path:'adminlanding', component:AdminLandingPagesComponent,canActivate:[GaurdGuard], children:[
    
     {path:'adminlistbooks' , component:ListofadminbooksComponent},
     {path:'viewrequest', component:ViewRequestComponent},

@@ -31,6 +31,16 @@ name=localStorage.getItem('username')
     
     });
   }
+  url="";
+  onFileSelected(event: any){
+    if(event.target.files){
+      var reader=new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload=(eventpara:any)=>{
+        this.url=eventpara.target.result;
+      }
+    }
+  }
 
 
 }

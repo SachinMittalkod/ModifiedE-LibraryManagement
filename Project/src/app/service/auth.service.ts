@@ -61,13 +61,13 @@ navigateUser(){
 checkRole()
 {
   this.isAuthenticated=true;
-  if(this.response.role ==='admin')
+  if(this.response.role ==='1')
   {
     this.isAdmin=true;
     this.isAuthenticated=true;
     this.router.navigate(['/adminlanding']);
   }
-  else if(this.response.role==='user')
+  else if(this.response.role==='2')
   {
     this.isUser=true;
     this.isAuthenticated=true;

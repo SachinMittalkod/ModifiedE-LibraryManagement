@@ -31,8 +31,7 @@
       "BookName": "Rowling",
       "Author": "sachin",
       "Date": "2022-07-31",
-      "id": 13,
-      "Category":1
+      "id": 13
     },
     {
       "image": "https://orion-uploads.openroadmedia.com/sm_f7e651-tolkien-lordoftherings.jpg",
@@ -56,19 +55,12 @@
       "id": 16
     },
     {
-      "image": "asds",
-      "BookName": "asds",
-      "Author": "asd",
-      "Date": "2022-08-08",
+      "image": "xcvcx",
+      "BookName": "xcv",
+      "Author": "xcvcvc",
+      "Date": "2022-09-23",
+      "Category": "Poems",
       "id": 17
-    },
-    {
-      "image": "asdsad",
-      "BookName": "asd",
-      "Author": "asdsad",
-      "Date": "2022-08-17",
-      "Category": "",
-      "id": 18
     }
   ],
   "signupuser": [
@@ -76,14 +68,14 @@
       "id": 1,
       "username": "admin",
       "createpassword": "admin1234",
-      "role": "admin"
+      "role": "1"
     },
     {
       "username": "sachin",
       "email": "sachinmittalkod@gmail.com",
       "mobileno": "123546",
       "createpassword": "sachin1234",
-      "role": "user",
+      "role": "2",
       "id": 3
     },
     {
@@ -105,25 +97,6 @@
       "id": 5
     },
     {
-      "username": "om",
-      "email": "admin@gmail.com",
-      "mobileno": "76576",
-      "createpassword": "omm",
-      "role": "user",
-      "gender": "1",
-      "id": 6
-    },
-    {
-      "username": "asds",
-      "email": "admina",
-      "mobileno": "sdsds",
-      "createpassword": "admin1234asd",
-      "role": "user",
-      "gender": "Male",
-      "id": 7
-  
-    },
-    {
       "username": "asdsd",
       "email": "admin",
       "mobileno": "asdsd",
@@ -133,13 +106,22 @@
       "id": 8
     },
     {
-      "username": "",
-      "email": "admin",
-      "mobileno": "",
-      "createpassword": "admin1234",
+      "username": "Abhinav",
+      "email": "abhi@google.com",
+      "mobileno": "21515132",
+      "createpassword": "1234",
       "role": "user",
-      "gender": "",
+      "gender": "Male",
       "id": 9
+    },
+    {
+      "username": "Rushikesh",
+      "email": "sasajaj@gmail.com",
+      "mobileno": "454",
+      "createpassword": "1234",
+      "role": "2",
+      "gender": "Male",
+      "id": 10
     }
   ],
   "reqbook": [
