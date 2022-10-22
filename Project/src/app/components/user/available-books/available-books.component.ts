@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
+import { Adminaddbook } from 'src/app/model/adminaddbook.model';
 import { Requestbook } from 'src/app/model/requestbook.model';
 import { AdminaddbookService } from 'src/app/service/adminaddbook.service';
 import { BooksService } from 'src/app/service/books.service';
@@ -15,18 +16,20 @@ import { BooksService } from 'src/app/service/books.service';
 })
 export class AvailableBooksComponent implements OnInit {
   term:string="";
-  column=["id","image","BookName" ,"author" ,"imageUrl"]
+  column=["BookId","ImageUrl","BookName" ,"AuthorName" ]
     constructor(private service:BooksService, private adminservice:AdminaddbookService,private toastr:ToastrService) { }
-  users:Requestbook[]=[];
+  //user:Adminaddbook;
+  user:any;
   today= new Date();
   no:any=0;
   tomorrow = new Date(this.today.getTime() + (168 * 60 * 60 * 1000));
   
     ngOnInit(): void {
       
-    
-      this.adminservice.getAdminBook().subscribe((response)=>{
-        this.users=response;
+    debugger;
+      this.adminservice.getAllBookDetails().subscribe((response)=>{
+        console.log(response);
+        this.user=response;
       })
 
     }

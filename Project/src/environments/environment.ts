@@ -17,9 +17,11 @@ export const environment = {
   baseApiUrl:'https://localhost:44381/api/User',
   //postBookApiUrl:'https://localhost:44381/api/Book',
   postBookApiUrl:'https://localhost:44381/api/Book',
+  getAllBookDetailApiUrl:'https://localhost:44381/api/Book/GetBookDetails',
   UserRequestAPI:'https://localhost:44381/api/UserRequest',
   IssuedBook:'https://localhost:44381/api/IssuedBook',
   LoginApi:'https://localhost:44381/api/Login'
+
   
   
 };

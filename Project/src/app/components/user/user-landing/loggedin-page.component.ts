@@ -5,6 +5,7 @@ import { BooksService } from 'src/app/service/books.service';
 import { AdminaddbookService } from 'src/app/service/adminaddbook.service';
 import { Requestbook } from 'src/app/model/requestbook.model';
 import { Router } from '@angular/router';
+import { Adminaddbook } from 'src/app/model/adminaddbook.model';
 
 @Component({
   selector: 'app-loggedin-page',
@@ -14,7 +15,7 @@ import { Router } from '@angular/router';
 export class LoggedinPageComponent implements OnInit {
 name=localStorage.getItem('username')
   constructor(private dialog:MatDialog,private service:BooksService,private adminservice: AdminaddbookService,private router:Router) { }
-  users: Requestbook[] = [];
+  users: Adminaddbook[] = [];
   term:string=" ";
   confirm:string="Cancel";
   ngOnInit(): void {

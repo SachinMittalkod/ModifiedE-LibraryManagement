@@ -23,8 +23,8 @@ export class  AdminaddbookService {
 
    adminaddurl=environment.adminAddurl; 
    baseUrlApi=environment.baseApiUrl;
-   postBookApiUrl=environment.postBookApiUrl
-
+   postBookApiUrl=environment.postBookApiUrl;
+   getAllBookDetailApiUrl=environment.getAllBookDetailApiUrl;
   constructor(private http:HttpClient, private router:Router) { }
   // adminaddBook
   
@@ -55,6 +55,14 @@ export class  AdminaddbookService {
   public getAdminBook(){
     return this.http.get<any>(this.adminaddurl);
   }
+
+
+//-----Using WEBAPI------//
+
+public getAllBookDetails():Observable<Adminaddbook> {
+  debugger;
+  return this.http.get<Adminaddbook>(this.getAllBookDetailApiUrl);
+}
 
   
 

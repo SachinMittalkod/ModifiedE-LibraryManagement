@@ -31,7 +31,7 @@ export class IssuedBooksComponent implements OnInit {
   ngOnInit(): void {
   
     this.adminservice.getAdminBook().subscribe((response) => {
-      this.users = response;
+    this.users = response;
       console.log(this.users);
     });
 
@@ -44,10 +44,10 @@ export class IssuedBooksComponent implements OnInit {
     this.adminservice.deleteAdminBook(id).subscribe((resp) => {
       console.log(resp);
 
-      this.adminservice.getAdminBook().subscribe((response) => {
-        this.users = response;
-        console.log(this.users);
-      });
+      // this.adminservice.getAdminBook().subscribe((response) => {
+      //   this.users = response;
+      //   console.log(this.users);
+      // });
       
    
 
