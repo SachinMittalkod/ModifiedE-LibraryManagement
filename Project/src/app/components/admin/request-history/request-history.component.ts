@@ -5,7 +5,8 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { Requestbook } from 'src/app/model/requestbook.model';
 import { MatSort } from '@angular/material/sort';
-import { ColDef } from 'ag-grid-community';
+import { ColDef, GridReadyEvent, RowHeightParams } from 'ag-grid-community';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -24,7 +25,7 @@ export class RequestHistoryComponent implements OnInit {
   dataSource: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator !: MatPaginator;
   @ViewChild(MatSort) sort !: MatSort;
-  constructor(private service:BooksService) { }
+  constructor(private service:BooksService,private http: HttpClient) { }
 
   ngOnInit(): void {
     this.service.getrequest().subscribe(data=>{
@@ -76,6 +77,10 @@ export class RequestHistoryComponent implements OnInit {
     {headerName:'Date', field: 'Date'}   
   ] 
  
+  getRowHeight(params: RowHeightParams): number | undefined | null {
+    return params.data.rowHeight;
+  }
 
+ 
 
 }

@@ -1,4 +1,4 @@
-    <h1>Number of Books</h1>
+    <h1>Number of Issued Books</h1>
     <div class="form-outline ">
       <input style="margin: 2rem;"
         type="text"
@@ -20,7 +20,9 @@
             <mat-card-content>
               {{ item.Author }}
               <p> {{item.Date}}</p>
-              <p> {{tomorrow | date}}</p>
+              
+              <p> Return Date:- {{tomorrow | date }}</p>
+       
              
             </mat-card-content>
     

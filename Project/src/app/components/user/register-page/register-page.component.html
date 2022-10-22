@@ -9,21 +9,20 @@
         <mat-card-title >Registration</mat-card-title>
       </mat-card-header>
      
-      <form class="example-form" [formGroup]="signup" >
-       
+      <form class="example-form" [formGroup]="signup" >       
         <mat-card-content>
          
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Enter your name" formControlName="username">
+            <input matInput placeholder="Enter your name" formControlName="Name">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Email" type="email" formControlName="email">
+            <input matInput placeholder="Email" type="email" formControlName="Email">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Mobile No" type="text" formControlName="mobileno">
+            <input matInput placeholder="Mobile No" type="text" formControlName="MobileNO">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="create password" type="password" formControlName="createpassword">
+            <input matInput placeholder="create password" type="password" formControlName="password">
           </mat-form-field>
           
         
@@ -41,10 +40,6 @@
         </mat-card-content>
       
         <button mat-stroked-button color="yarn" class="btn-block" (click)="register()">Register</button>
-        
-    
-     
-       
       </form> 
     </mat-card>
     <router-outlet></router-outlet>

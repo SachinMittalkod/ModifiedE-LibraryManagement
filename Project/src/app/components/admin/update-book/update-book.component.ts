@@ -36,9 +36,9 @@ export class UpdateBookComponent implements OnInit {
     this.services.getBookId(this.editId).subscribe(response=>{
       this.forms=this.fb.group({
   
-        image:[response['image']],
+        ImageUrl:[response['ImageUrl']],
         BookName:[response['BookName']],
-        Author:[response['Author']],
+        AuthorName:[response['AuthorName']],
        Date:[response['Date']]
       });
 

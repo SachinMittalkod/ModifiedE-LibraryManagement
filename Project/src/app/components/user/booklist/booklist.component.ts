@@ -21,11 +21,12 @@ users:Requestbook[]=[];
 
 today= new Date();
 
-tomorrow = new Date(this.today.getTime() + (168 * 60 * 60 * 1000));
+tomorrow = new Date(this.today.getTime() + (72 * 60 * 60 * 1000));
+
   ngOnInit(): void {  
-    this.adminservice.getAdminBook().subscribe((response)=>{
+    this.service.issuedBooks().subscribe((response)=>{
       this.users=response;
-      var reqDate=this.users
+    
       console.log(this.users);
     })
   } 

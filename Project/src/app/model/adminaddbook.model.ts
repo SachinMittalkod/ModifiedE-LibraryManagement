@@ -1,8 +1,9 @@
 export class Adminaddbook{
-    id:number;
-    image:string;
+  
+    BookId:number;
     BookName:string;
-    Author:string;
-    Date:string;  
-    Category:string; 
+    AuthorName:string;
+    Date:Date;  
+    ImageUrl:string; 
+   
 }

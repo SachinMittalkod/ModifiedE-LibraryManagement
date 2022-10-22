@@ -1,5 +1,5 @@
-
-<div class="widthad">
+<!-- 
+ <div class="widthad">
     <mat-card >
         <form [formGroup]="forms" (ngSubmit)="onFormSubmit(forms.value)" >
             <h2>Add Book</h2>
@@ -36,16 +36,10 @@
                     <span *ngIf="!forms.get('Date')?.valid && forms.get('Date')?.touched">Date Required</span>
                 </mat-error>
               </mat-form-field>
-          
-              <mat-form-field >
-                
-                <select matNativeControl required formControlName="Category" placeholder="Select Category">
+         
+
+              
            
-                  <option value="Poems">Poems</option>
-                  <option value="Education">Education</option> 
-                </select>
-            
-              </mat-form-field>
 
             
             <div class="button-row">
@@ -62,7 +56,77 @@
               </div>
         </form>
     </mat-card>
+</div>  -->
+
+
+
+
+<div class="widthad">
+    <mat-card >
+        <form class="example-form" [formGroup]="forms" >
+            <h2>Add Book</h2>
+        
+          
+            <mat-form-field>
+                <input matInput placeholder="Enter Book Name" formControlName="BookName">
+               
+                <mat-error>
+                    <span *ngIf="!forms.get('BookName')?.valid && forms.get('BookName')?.touched">Name Required</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Enter Author Name" formControlName="AuthorName">
+            
+                <mat-error>
+                    <span *ngIf="!forms.get('Author')?.valid && forms.get('Author')?.touched">Author name Required</span>
+                </mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <input matInput type="date"  formControlName="Date">
+                <mat-error>
+                    <span *ngIf="!forms.get('Date')?.valid && forms.get('Date')?.touched">Date Required</span>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input type="text" matInput placeholder="Add image url" formControlName="ImageUrl">   
+                <mat-error>
+                    <span *ngIf="!forms.get('image')?.valid && forms.get('image')?.touched">image Required</span>
+                </mat-error>
+            </mat-form-field>
+          
+
+            
+            <div class="button-row">
+                <button mat-flat-button color="primary" [disabled]="!forms.valid"><span class="material-symbols-sharp" (click)="postBook()">send</span></button>
+            </div>
+            <div class="reset">
+            <button type="button"(click)="forms.reset()"><span class="material-icons-outlined">
+                Reset
+                </span></button>
+          
+            </div>
+            <div mat-dialog-actions>
+                <button mat-button mat-dialog-close>Close</button>
+              </div>
+        </form>
+    </mat-card>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

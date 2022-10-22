@@ -8,6 +8,7 @@ import { BooksService } from '../service/books.service';
   providedIn: 'root'
 })
 export class GaurdGuard implements CanActivate {
+  roleId = sessionStorage.getItem('role');
   constructor(private authservices:AuthService, private router:Router){}
   
 
@@ -17,10 +18,13 @@ export class GaurdGuard implements CanActivate {
     
         state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-          if(this.authservices.isAdmin){
+        //   if(this.authservices.isAdmin){
     
-        return true;
+        // return true;
     
+        //   }
+          if (sessionStorage.getItem('isLoggedIn') == 'true') {
+            return true;
           }
     
           else if(this.authservices.isUser){

@@ -17,16 +17,18 @@ export class RegisterPageComponent implements OnInit {
   ngOnInit(): void {
     this.signup=this.fb.group({
       
-      username:[""],
-      email:[""],
-      mobileno:[""],
-      createpassword:[""],
-      role:['2'],
-      gender:[""]
+      Name:[""],
+      Email:[""],
+      MobileNO:[""],
+      password:[""],
+      RoleId:[2],
+      gender:[""],
+      UserId:[]
     })
   
   }
-  register(){
+  public register(){
+    debugger;
     // this.http.post<any>('http://localhost:3000/signupuser', this.signup.value).subscribe(resp=>{
       this.service.register(this.signup.value).subscribe(response=>{
         console.log(response);

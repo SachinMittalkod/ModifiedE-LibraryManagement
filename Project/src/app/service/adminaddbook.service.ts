@@ -1,22 +1,56 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Subject, tap } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { Adminaddbook } from '../model/adminaddbook.model';
+import { environment } from 'src/environments/environment';
+import { requestedBook } from '../model/requestedBook.model';
+
+
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AdminaddbookService {
-  adminaddurl='http://localhost:3000/AdminAddbooks';
+export class  AdminaddbookService {
+  private _refresh = new Subject<void>();
+
+  get refreshRequired() {
+    return this._refresh;
+  }
   subject=new Subject();
+
+   adminaddurl=environment.adminAddurl; 
+   baseUrlApi=environment.baseApiUrl;
+   postBookApiUrl=environment.postBookApiUrl
+
   constructor(private http:HttpClient, private router:Router) { }
   // adminaddBook
   
-  public postAdminBook(emp:any):Observable<Adminaddbook>{
-    return this.http.post<Adminaddbook>(this.adminaddurl,emp);
-  }
+  // public postAdminBook(emp:any):Observable<Adminaddbook>{
+  //   return this.http.post<Adminaddbook>(this.adminaddurl,emp);
+  // }
+
+  // public postAdminBook(add:any):Observable<Adminaddbook>{
+  //  // debugger;
+  //   console.log("from service"+ add.value);
+  //   //return this.http.post<Adminaddbook>(this.postBookApiUrl,add.value);
+  //   return this.http.post<Adminaddbook>(`${this.postBookApiUrl}/PostBook`, add.value);
+  // }
+
+  public postAdminBook(add:any):Observable<Adminaddbook>{
+    // debugger;
+     console.log("from service"+ add.value);
+     //return this.http.post<Adminaddbook>(this.postBookApiUrl,add.value);
+     return this.http.post<Adminaddbook>(this.postBookApiUrl, add)
+   }
+  
+  public postUserRequets(add:any):Observable<requestedBook>{
+    // debugger;
+     console.log("from service"+ add.value);
+     return this.http.post<requestedBook>(this.postBookApiUrl,add.value);
+   }
 
   public getAdminBook(){
     return this.http.get<any>(this.adminaddurl);

@@ -35,7 +35,7 @@ export class AvailableBooksComponent implements OnInit {
     public requestBook(item:any){
      debugger;
       if(this.no<3){
-        this.service.postRequest(item).subscribe(resp=>{
+        this.adminservice.postUserRequets(item).subscribe(resp=>{
           console.log(resp);
           this.no++;
      })

@@ -5,18 +5,27 @@ import { Adminaddbook } from '../model/adminaddbook.model';
 import { User } from '../model/book.model';
 import { Requestbook } from '../model/requestbook.model';
 import { Registration } from '../model/user.model';
+import { environment } from 'src/environments/environment';
+
+const baseUrl=environment.baseUrl;
 
 @Injectable({
   providedIn: 'root'
 })
 export class BooksService {
-  baseUrl='http://localhost:3000/Books';
-  reqbookurl='http://localhost:3000/reqbook'
-  signupurl='http://localhost:3000/signupuser'
-  adminurl='http://localhost:3000/admindata'
-  adminaddbooks='http://localhost:3000/AdminAddbooks'
-  requsetedhistory='http://localhost:3000/reqhistory'
-  
+  // baseUrl='http://localhost:3000/Books';
+  // reqbookurl='http://localhost:3000/reqbook'
+  // signupurl='http://localhost:3000/signupuser'
+  // adminurl='http://localhost:3000/admindata'
+  // adminaddbooks='http://localhost:3000/AdminAddbooks'
+  // requsetedhistory='http://localhost:3000/reqhistory'
+   baseUrl=environment.baseUrl;
+   reqbookurl=environment.reqbookurl;
+   signupurl=environment.signupurl;
+   adminurl=environment.adminurl;
+   adminaddbooks=environment.adminaddbooks;
+   requsetedhistory=environment.requsetedhistory;
+   baseUrlApi=environment.baseApiUrl;
   constructor(private http:HttpClient) { }
 
   user:any;
@@ -82,13 +91,19 @@ return this.http.get(this.adminurl).subscribe(resp=>{
 
 
  public register(sign:any):Observable<Registration>{
-    return this.http.post<Registration>(this.signupurl, sign)
+  debugger;
+  console.log(sign);
+    return this.http.post<Registration>(this.baseUrlApi, sign)
   }
  
   public postreqhistory(body:any):Observable<Requestbook>{
     return this.http.post<Requestbook>(this.requsetedhistory,body)
   }
   public getreqhistory():Observable<any>{
+    return this.http.get<Requestbook[]>(this.requsetedhistory)
+  }
+//Both methods are same only name is different for naming convection
+  public issuedBooks():Observable<any>{
     return this.http.get<Requestbook[]>(this.requsetedhistory)
   }
 

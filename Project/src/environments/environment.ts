@@ -3,7 +3,25 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  adminAddurl:'http://localhost:3000/AdminAddbooks',
+  baseUrl: 'http://localhost:3000/Books',
+  reqbookurl: 'http://localhost:3000/reqbook',
+  signupurl: 'http://localhost:3000/signupuser',
+  adminurl: 'http://localhost:3000/admindata',
+  adminaddbooks: 'http://localhost:3000/AdminAddbooks',
+  requsetedhistory: 'http://localhost:3000/reqhistory',
+  poemurl: 'http://localhost:3000/poems',
+
+  //from  WebApi service//
+  baseApiUrl:'https://localhost:44381/api/User',
+  //postBookApiUrl:'https://localhost:44381/api/Book',
+  postBookApiUrl:'https://localhost:44381/api/Book',
+  UserRequestAPI:'https://localhost:44381/api/UserRequest',
+  IssuedBook:'https://localhost:44381/api/IssuedBook',
+  LoginApi:'https://localhost:44381/api/Login'
+  
+  
 };
 
 /*

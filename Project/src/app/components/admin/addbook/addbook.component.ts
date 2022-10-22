@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, RequiredValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -13,42 +14,42 @@ import { NotificationService } from 'src/app/service/notification.service';
   styleUrls: ['./addbook.component.css']
 })
 export class AddbookComponent implements OnInit {
-  forms: FormGroup;
-  arryofdata:any=[];
+  public forms: FormGroup;
+  public signup:FormGroup;
   cat:string="poem"
   constructor(private fb:FormBuilder, private service:BooksService, private route:Router,
-    private notifiservice:NotificationService, private services:AdminaddbookService,
-    private toastr: ToastrService, private categoryService:CategoryService) { }
+    private notifiservice:NotificationService, private addBookService:AdminaddbookService,
+    private toastr: ToastrService, private categoryService:CategoryService, private http:HttpClient) { }
   ngOnInit(): void {
     this.forms=this.fb.group({
-  
-      image:['', Validators.required],
+      
       BookName:['',Validators.required],
-      Author:['',Validators.required],
-     Date:['',Validators.required],
-     Category:['']
-
+      AuthorName:['',Validators.required],     
+      Date:[Date,Validators.required],
+      ImageUrl:['', Validators.required],
+      BookId:[],     
+     
     })
   }
 
 
-  public onFormSubmit(forms:NgForm){
-    console.log(forms);  
-
-    this.services.postAdminBook(forms).subscribe(data=>{
-      this.arryofdata=data;
-
+ public postBook(){
+    //debugger;
+console.log(this.forms.value);
+    this.addBookService.postAdminBook(this.forms.value).subscribe(data=>{
+debugger;
+      console.log(data);
       this.toastr.success('', 'Book Added Successfully', {
         positionClass: 'toast-top-center'
       });
-      // this.notifiservice.showSuccess("You Have Added Book","Successfully")
-      
-
     })
       }
 
+
+
+
+
+
+
+
 }
-
-
-
-

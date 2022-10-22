@@ -1,58 +1,19 @@
 
-<!-- <div class="loggedin">
-<div class="background">
-  <mat-toolbar class="mat-elevation-z4">
-   
-      <button type="button" mat-icon-button (click)="drawer.toggle()" color="">
-        <mat-icon>menu</mat-icon>
-      </button>
-
-      <span class="example-spacer"></span>
-      
-  
-     <div>Welcome  <span style="color: orange ;">{{name}}</span> </div>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" >
-        <mat-icon matTooltip="Logout" routerLink="/home"><span class="material-symbols-outlined"  >
-            logout
-            </span></mat-icon>
-      </button>
-      
-    
-  <mat-menu #afterMenu="matMenu" xPosition="after">
-    <button mat-menu-item [routerLink]="['/viewrequest']" routerLinkActive="router-link-active" >Requests</button>
-   
-  </mat-menu>
-    </mat-toolbar>
-
-    <mat-sidenav-container class="example-container">
-      <mat-sidenav #drawer mode="side" closed  class="sidenav" >
-        <mat-nav-list class="links">
-          <a mat-list-item  [routerLink]="['/booklist']" routerLinkActive="router-link-active"  >Issued Books<span class="material-icons">library_books</span></a>
-          <a mat-list-item (click)="openDialog()">Request for book</a>
-         
-        </mat-nav-list>
-      </mat-sidenav>
-      <mat-sidenav-content>
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-    
-    </div> -->
 <!-- -----------------------User Landing ------------------------------------------------------ -->
 
-<!-- <app-navbar-master></app-navbar-master> -->
+
 
 
 <mat-sidenav-container>
 
-
-  <mat-sidenav #drawer mode="side" opened class="sidenav">
+  <mat-sidenav #drawer mode="side" opened class="sidenav" style="width: 235px;" >
     <mat-nav-list class="links">
  
-      <img class="avatar mat-elevation-z4 image" src="https://booleanstrings.com/wp-content/uploads/2021/10/profile-picture-circle-hd.png" />
-      <!-- <img class="avatar mat-elevation-z4 image" src="url" /> -->
-      <mat-icon style="margin-top: -8rem;">edit </mat-icon>
      
+      <img class="avatar mat-elevation-z4 image" src="https://booleanstrings.com/wp-content/uploads/2021/10/profile-picture-circle-hd.png" />
+   
+      <mat-icon >edit </mat-icon>
+
      
       <span style="color: aqua; margin-left: 1rem; font-size: 30px;"> Welcome </span>
       <div> <span style="color: orange; font-size: 2rem;margin:1rem 3rem;">{{name}}</span> </div>
@@ -68,60 +29,32 @@
 
 </mat-menu>
 
-<!-- <mat-menu #vertebrates="matMenu" style="overflow-x: hidden;">
-  <button mat-menu-item>POEMS</button>
-  <button mat-menu-item>EDUCATION</button>
-  <button mat-menu-item>NOVELS</button>
-</mat-menu> -->
 
-<mat-menu #invertebrates="matMenu">
-  <button mat-menu-item>Insects</button>
-  <button mat-menu-item>Molluscs</button>
-  <button mat-menu-item>Crustaceans</button>
-  <button mat-menu-item>Corals</button>
-  <button mat-menu-item>Arachnids</button>
-  <button mat-menu-item>Velvet worms</button>
-  <button mat-menu-item>Horseshoe crabs</button>
-</mat-menu>
+
+
  
   </mat-sidenav>
+ 
   <mat-sidenav-content>
     <div class="content">
       <div class="toolbar">
 
-        <button type="button" mat-icon-button (click)="drawer.toggle()" color="">
+        <button type="button" mat-icon-button (click)="drawer.toggle()" color="" >
           <mat-icon>menu</mat-icon>
+        
+
           </button>
         
-        <!-- <mat-toolbar color="primary" class="mat-elevation-z4">
-          <button type="button" mat-icon-button (click)="drawer.toggle()" color="">
-            <mat-icon>menu</mat-icon>
-            </button>
-
-   
-            <span>Welcome  <span style="color: orange ;">{{name}}</span> </span>
-            <span class="example-spacer"></span> 
-           
-            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" >
-              <mat-icon routerLink="/login">
-                <span matTooltip="Logout" class="material-symbols-outlined">logout</span>
-              </mat-icon>
-            </button>
-      
-            <mat-menu #afterMenu="matMenu" xPosition="after">
-              <button mat-menu-item [routerLink]="['/viewrequest']" routerLinkActive="router-link-active" >Requests</button>  
-            </mat-menu>
-   
-           
-            </mat-toolbar> -->
-           
+ 
+          
+          
       </div>
 
-      
       <div class="main">
         <router-outlet></router-outlet>
       </div>
     </div>
+
 
   </mat-sidenav-content>  
 </mat-sidenav-container>

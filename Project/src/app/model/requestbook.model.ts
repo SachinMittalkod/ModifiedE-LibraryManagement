@@ -1,9 +1,10 @@
 export class Requestbook{
-    id:number;
-    image:string;
+    BookId:number;
+   ImageUrl:string;
     BookName:string;
-    Author:string;
+    AuthorName:string;
     Date:Date;
+    UserID:string;
 
 }
 

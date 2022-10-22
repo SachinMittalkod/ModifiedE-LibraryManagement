@@ -1,9 +1,9 @@
 export class Registration {
-    id:number;
-    username:string;
-    email:string;
-    mobileno:string;
-    role:string;
-    createpassword:string;
+    UserId:number;
+    Name:string;
+    Email:string;
+    MobileNO:string;
+    RoleId:number;
+    password:string;
     gender:string;
 }
