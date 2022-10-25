@@ -22,9 +22,10 @@ export class  AdminaddbookService {
   subject=new Subject();
 
    adminaddurl=environment.adminAddurl; 
-   baseUrlApi=environment.baseApiUrl;
+   baseUrlApi=environment.userApiUrl;
    postBookApiUrl=environment.postBookApiUrl;
    getAllBookDetailApiUrl=environment.getAllBookDetailApiUrl;
+   PostUserRequestAPI=environment.PostUserRequestAPI
   constructor(private http:HttpClient, private router:Router) { }
   // adminaddBook
   
@@ -64,7 +65,14 @@ public getAllBookDetails():Observable<Adminaddbook> {
   return this.http.get<Adminaddbook>(this.getAllBookDetailApiUrl);
 }
 
+public postUserRequestAPI(add:any):Observable<requestedBook>{
+ debugger;
+   console.log("from service"+ add.value);
+   return this.http.post<requestedBook>(this.PostUserRequestAPI,add.value);
+ }
+
   
+//-----Using WEBAPI------//
 
   public deleteAdminBook(id:number){
     const url=`${this.adminaddurl}/${id}`

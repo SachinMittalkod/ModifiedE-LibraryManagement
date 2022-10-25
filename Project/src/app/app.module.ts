@@ -31,6 +31,8 @@ import { NavbarMasterComponent } from './shared/navbar/navbar-master.component';
 import { HighlightDirective } from './shared/custom-directive/highlight.directive';
 import { MaterialModule } from './shared/material/material.module';
 import { AgGridModule } from 'ag-grid-angular';
+import { RegisteredUsersComponent } from './components/admin/registered-users/registered-users.component';
+import { RegisteredUsersListComponent } from './components/admin/registered-users-list/registered-users-list.component';
 
 
 
@@ -57,6 +59,8 @@ import { AgGridModule } from 'ag-grid-angular';
     AdminLandingPagesComponent,
     HomeComponent,
     HighlightDirective,
+    RegisteredUsersComponent,
+    RegisteredUsersListComponent,
   ],
   imports: [
     AgGridModule,

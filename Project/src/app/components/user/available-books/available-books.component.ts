@@ -26,7 +26,7 @@ export class AvailableBooksComponent implements OnInit {
   
     ngOnInit(): void {
       
-    debugger;
+    
       this.adminservice.getAllBookDetails().subscribe((response)=>{
         console.log(response);
         this.user=response;
@@ -36,9 +36,9 @@ export class AvailableBooksComponent implements OnInit {
 
   
     public requestBook(item:any){
-     debugger;
+    debugger
       if(this.no<3){
-        this.adminservice.postUserRequets(item).subscribe(resp=>{
+        this.adminservice.postUserRequestAPI(item).subscribe(resp=>{
           console.log(resp);
           this.no++;
      })
@@ -51,6 +51,11 @@ export class AvailableBooksComponent implements OnInit {
         });
       }
  
+    }
+
+    public storeUserInfo():void {
+      sessionStorage.setItem('bookId', this.user);
+
     }
 
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, MaxValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BooksService } from 'src/app/service/books.service';
 import { NotificationService } from 'src/app/service/notification.service';
@@ -17,7 +17,7 @@ export class RegisterPageComponent implements OnInit {
   ngOnInit(): void {
     this.signup=this.fb.group({
       
-      Name:[""],
+      Name:["",Validators.required],
       Email:[""],
       MobileNO:[""],
       password:[""],

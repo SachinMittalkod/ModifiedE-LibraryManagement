@@ -19,7 +19,8 @@ import { NavbarMasterComponent } from './shared/navbar/navbar-master.component';
 import { HomeComponent } from './components/home/home.component';
 import { AvailableBooksComponent } from './components/user/available-books/available-books.component';
 import { GaurdGuard } from './shared/gaurd.guard';
-import { AuthroleService } from './shared/authrole.service';
+import { RegisteredUsersListComponent } from './components/admin/registered-users-list/registered-users-list.component';
+//import { AuthroleService } from './shared/authrole.service';
 
 
 
@@ -30,14 +31,15 @@ const routes: Routes = [
   {path: '', redirectTo:'login' ,pathMatch:'full'},
   // {path:'home',component:NavbarComponent, }, 
   {path:'home',component:NavbarMasterComponent,children:[{path:'mainhome', component:HomeComponent}] }, 
-  {path:'adminlogin',component:AdminLoginComponent}, 
-  //must keep in admin landing canActivate:[GaurdGuard]
+  {path:'adminlogin',canActivate:[GaurdGuard],component:AdminLoginComponent}, 
+ 
   {path:'login',component:UserloginComponent},  
   {path:'userlanding', component:LoggedinPageComponent, children:[
     // canActivate:[GaurdGuard], 
     {path:'booklist', component:BooklistComponent},
     // {path:'availablebooks', component:IssuedBooksComponent},
     {path:'requesthistory' ,component:RequestHistoryComponent},
+
     {path:'availablebooks' , component:AvailableBooksComponent}
   ]},
 
@@ -47,6 +49,7 @@ const routes: Routes = [
   {path:'update/:id', component:UpdateBookComponent},
   {path:'adminlanding', component:AdminLandingPagesComponent, children:[
     //canActivate:[GaurdGuard],
+    {path:'listofUsers', component:RegisteredUsersListComponent},
     {path:'adminlistbooks' , component:ListofadminbooksComponent},
     {path:'viewrequest', component:ViewRequestComponent},
   {path:'requesthistory', component:RequestHistoryComponent}]},

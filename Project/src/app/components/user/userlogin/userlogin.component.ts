@@ -42,45 +42,45 @@ export class UserloginComponent implements OnInit {
         // username:["",Validators.required],
         // createpassword:["",Validators.required],
         //-----WEB api-----//
-        Name:["",Validators.required],
+        name:["",Validators.required],
         password:["",Validators.required],
       })
   }
-  // public login(){
- 
-  //   this.nameon=this.authservice.authenticateEmployee(this.data.value);
-  //   localStorage.setItem('username', this.data.value.username);
-  // }
+  public login(){
 
-  //-------LOgin API------//
-
-  public onSubmit(form:NgForm){
- debugger;
-   this.authservice.authenticateUser(form).subscribe(resp=>{
-      console.log(resp);
-      this.responseData=resp;
-      //this.notifiservice.showSuccess('Congratulations','Registered Successfully');
-      this.userChecked();
-    })
-  
+    this.nameon=this.authservice.authenticateEmployee(this.data.value);
+    localStorage.setItem('username', this.data.value.Name);
   }
+
+  //-------LOgin API------//  
+
+//   public onSubmit(form:NgForm){
+//  debugger;
+//    this.authservice.authenticateUser(form).subscribe(resp=>{
+//       console.log(resp);
+//       this.responseData=resp;
+//       //this.notifiservice.showSuccess('Congratulations','Registered Successfully');
+//      //this.userChecked();
+//     })
   
-  public userChecked():void {
-    if (this.data) {
-      this.storeUserInfo();
-      this.toastrService.success('Login Successfull', 'Success', { tapToDismiss: true });
-      this.router.navigate(['userlanding']);
-    } else {
-      this.toastrService.error(' invalid email or password', 'Invalid Credentials', { tapToDismiss: true });
-    }
+//   }
+  
+//   public userChecked():void {
+//     if (this.data) {
+//       this.storeUserInfo();
+//       this.toastrService.success('Login Successfull', 'Success', { tapToDismiss: true });
+//       this.router.navigate(['userlanding']);
+//     } else {
+//       this.toastrService.error(' invalid email or password', 'Invalid Credentials', { tapToDismiss: true });
+//     }
    
-  }
-  public storeUserInfo():void {
-    sessionStorage.setItem('UserId', this.responseData.UserId);
-    sessionStorage.setItem('Name', this.responseData.Name);
-    sessionStorage.setItem('RoleId', this.responseData.RoleId);
-    sessionStorage.setItem('token', this.responseData.token);
-    sessionStorage.setItem('isLoggedIn', 'true');
-  }
+//   }
+//   public storeUserInfo():void {
+//     sessionStorage.setItem('UserId', this.responseData.UserId);
+//     sessionStorage.setItem('Name', this.responseData.Name);
+//     sessionStorage.setItem('RoleId', this.responseData.RoleId);
+//     sessionStorage.setItem('token', this.responseData.token);
+//     sessionStorage.setItem('isLoggedIn', 'true');
+//   }
   
 }

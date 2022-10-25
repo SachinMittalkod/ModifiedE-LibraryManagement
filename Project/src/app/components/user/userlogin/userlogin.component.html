@@ -3,7 +3,7 @@
 <!-- ---------------------responsive here ------------------------------------------->
 <!-- <app-navbar-master></app-navbar-master> -->
 <h1>Welcome To E-Library</h1>
-<!-- <div class="center-content">
+<div class="center-content">
   <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title>Login</mat-card-title>
@@ -16,14 +16,14 @@
         
           <mat-card-content>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" formControlName="username" required>
+              <input matInput placeholder="Username" formControlName="name" required>
               <mat-error>
                 <span *ngIf="!data.get('id')?.valid && data.get('id')?.touched">User Name Required</span>
             </mat-error>
             </mat-form-field>
     
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Password" type="password" formControlName="createpassword" required>
+              <input matInput placeholder="Password" type="password" formControlName="password" required>
               <mat-error>
                 <span *ngIf="!data.get('password')?.valid && data.get('password')?.touched">User Name Required</span>
             </mat-error>
@@ -41,13 +41,13 @@
 
   </mat-card>
 </div>
- -->
 
 
 
 
 
- <div class="center-content">
+
+ <!-- <div class="center-content">
   <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title>Login</mat-card-title>
@@ -78,13 +78,13 @@
           <button style="margin-bottom: 20px;" mat-stroked-button color="accent" class="btn-block"  [disabled]="!data.valid">Log in</button>
   
           <h4 id="height" > Don't have Account? <a routerLink='/register'>Click here!!</a></h4>
-          <!-- <button mat-stroked-button color="primary" class="btn-block"  routerLink='/register'>Sign Up</button> -->
+        <button mat-stroked-button color="primary" class="btn-block"  routerLink='/register'>Sign Up</button> 
      
         </form> 
     </mat-card-content>
 
   </mat-card>
-</div>
+</div> -->
 
 
 

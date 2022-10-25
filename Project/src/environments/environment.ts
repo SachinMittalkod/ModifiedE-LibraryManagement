@@ -14,13 +14,14 @@ export const environment = {
   poemurl: 'http://localhost:3000/poems',
 
   //from  WebApi service//
-  baseApiUrl:'https://localhost:44381/api/User',
+  userApiUrl:'https://localhost:44381/api/User',
   //postBookApiUrl:'https://localhost:44381/api/Book',
   postBookApiUrl:'https://localhost:44381/api/Book',
   getAllBookDetailApiUrl:'https://localhost:44381/api/Book/GetBookDetails',
-  UserRequestAPI:'https://localhost:44381/api/UserRequest',
+  PostUserRequestAPI:'https://localhost:44381/api/UserRequest/PostRequest',
   IssuedBook:'https://localhost:44381/api/IssuedBook',
-  LoginApi:'https://localhost:44381/api/Login'
+  LoginApi:'https://localhost:44381/api/Login/loginUser'
+
 
   
   

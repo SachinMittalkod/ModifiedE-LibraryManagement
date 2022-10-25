@@ -86,11 +86,81 @@ data:any;
 
 //---------------Using API ------------//
 
-public authenticateUser(sign:any):Observable<LoginModel>{
+// public authenticateUser(sign:any):Observable<LoginModel>{
+//   debugger;
+//   console.log(sign);
+//     return this.http.post<LoginModel>(this.LoginApi, sign)
+//   }
+
+userApiUrl=environment.userApiUrl;
+//baseApiUrl:'https://localhost:44381/api/User'
+
+public authenticateEmployee(data:any)
+{
+
+  console.log(data);
+  return this.http.post(this.LoginApi,data).subscribe(respon=>{
+  console.log(respon);
+    this.user=respon;
+    console.log(this.user);
+    //this.data=data;
+    this.authenticateUser();
+   
+    this.navigateUser();
+  })
+}
+
+authenticateUser()
+{
+ 
+  console.log(this.user);
+  
+  this.response=(this.user.find((x:any)=>{
+    console.log(x.name);
+    return x.name==this.data.name && x.password==this.data.password
+ 
+
+  }))
+}
+
+navigateUser(){
+if(this.response)
+{
+  this.checkRole();
+  this.toastr.success('', 'Logged In Successfully', {
+    positionClass: 'toast-top-center'
+  });
+}
+else{
+  // alert ("Invalid Credential");
+  this.toastr.error('', 'Invalid Credentials', {
+    positionClass: 'toast-top-center'
+  });
+
+}
+}
+
+checkRole()
+{
   debugger;
-  console.log(sign);
-    return this.http.post<LoginModel>(this.LoginApi, sign)
-  }
+this.isAuthenticated=true;
+if(this.response.RoleId == '1')
+{
+  this.isAdmin=true;
+  this.isAuthenticated=true;
+  this.router.navigate(['/adminlanding']);
+}
+else if(this.response.RoleId == '2')
+{
+  this.isUser=true;
+  this.isAuthenticated=true;
+  this.router.navigate(['/userlanding']);
+}
+else
+{
+  alert ("Invalid user");
+}
+}
 
 }
 
