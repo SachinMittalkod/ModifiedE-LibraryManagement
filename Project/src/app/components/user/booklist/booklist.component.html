@@ -5,7 +5,10 @@
         [(ngModel)]="term"
         placeholder="Search by book name" class="form-control"/>
     </div>
-    <div class="rows">
+
+
+
+    <!-- <div class="rows">
    
       <div class="input-group" class="searchbox">
 
@@ -14,25 +17,48 @@
             class="column"
             *ngFor="let item of users | filter: term"
             class="col-md-2" fxLayoutGap="5px" style="margin-left: 5px; margin-bottom:25px; margin-right: 2rem; ">
-            <mat-card-title>{{ item.BookName }}</mat-card-title>
+            <mat-card-title>{{ item.bookName }}</mat-card-title>
     
             <img mat-card-lg-image src="{{ item.image }}" />
             <mat-card-content>
               {{ item.Author }}
               <p> {{item.Date}}</p>
-              
-              <p> Return Date:- {{tomorrow | date }}</p>
-       
-             
+              <p> Return Date:- {{tomorrow | date }}</p>             
             </mat-card-content>
-    
-    
-          
           </mat-card>
         </mat-card-content>
       </div>
-    </div>
+    </div> -->
     
+
+    <!-- AG_GRID -->
+
+
+  <!-- <h1>Requested History</h1> -->
+
+
+
+  <ag-grid-angular
+
+  [suppressRowHoverHighlight]="true"
+  [columnHoverHighlight]="true"
+  style="width: 62.8rem; height: 250px; margin: 4rem 10rem;
+  position: relative;"
+  class="ag-theme-alpine-dark"
+  [rowData]="history"
+  [columnDefs]="colDefs"
+  [defaultColDef]="defaultColDef"
+  [pagination]="true"
+  [paginationPageSize]="6"
+  [animateRows]="true"
+  [getRowHeight]="getRowHeight"
+ 
+  >
+  
+  </ag-grid-angular>
+
+
+
     
     
     

@@ -14,15 +14,33 @@
          
           <mat-form-field class="example-full-width">
             <input matInput placeholder="Enter your name" formControlName="Name">
+            <mat-error>
+              <span *ngIf="!signup.get('Name')?.valid && signup.get('Name')?.touched">User name Required</span>
+          </mat-error>
           </mat-form-field>
+
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Email" type="email" formControlName="Email">
+            <input matInput placeholder="Enter Email ID " type="email" formControlName="Email">
+
+            <mat-error>
+              <span *ngIf="!signup.get('Email')?.valid && signup.get('Email')?.touched">Email Required</span>
+          </mat-error>
+          
           </mat-form-field>
+
           <mat-form-field class="example-full-width">
             <input matInput placeholder="Mobile No" type="text" formControlName="MobileNO">
+       
+            <mat-error>
+              <span *ngIf="!signup.get('MobileNO')?.valid && signup.get('MobileNO')?.touched">Date Required</span>
+          </mat-error>
           </mat-form-field>
+
           <mat-form-field class="example-full-width">
             <input matInput placeholder="create password" type="password" formControlName="password">
+            <mat-error>
+              <span *ngIf="!signup.get('password')?.valid && signup.get('password')?.touched">Password Required</span>
+          </mat-error>
           </mat-form-field>
           
         
@@ -39,7 +57,7 @@
          
         </mat-card-content>
       
-        <button mat-stroked-button color="yarn" class="btn-block" (click)="register()">Register</button>
+        <button mat-stroked-button color="yarn" [disabled]="!signup.valid" class="btn-block" (click)="register()">Register</button>
       </form> 
     </mat-card>
     <router-outlet></router-outlet>

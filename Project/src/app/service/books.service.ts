@@ -92,6 +92,7 @@ return this.http.get(this.adminurl).subscribe(resp=>{
 
  public register(sign:any):Observable<Registration>{
   debugger;
+ 
   console.log(sign);
     return this.http.post<Registration>(this.baseUrlApi, sign)
   }

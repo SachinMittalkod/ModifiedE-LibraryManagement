@@ -16,11 +16,11 @@ export const environment = {
   //from  WebApi service//
   userApiUrl:'https://localhost:44381/api/User',
   //postBookApiUrl:'https://localhost:44381/api/Book',
-  postBookApiUrl:'https://localhost:44381/api/Book',
+  BookApiUrl:'https://localhost:44381/api/Book',
   getAllBookDetailApiUrl:'https://localhost:44381/api/Book/GetBookDetails',
   PostUserRequestAPI:'https://localhost:44381/api/UserRequest/PostRequest',
-  IssuedBook:'https://localhost:44381/api/IssuedBook',
-  LoginApi:'https://localhost:44381/api/Login/loginUser'
+  IssuedBookApiUrl:'https://localhost:44381/api/IssuedBook',
+  LoginApi:'https://localhost:44381/api/Login/loginUser',
 
 
   

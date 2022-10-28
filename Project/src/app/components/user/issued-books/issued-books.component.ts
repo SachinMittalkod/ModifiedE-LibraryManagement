@@ -8,6 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { NgForm } from '@angular/forms';
 import { Adminaddbook } from 'src/app/model/adminaddbook.model';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-issued-books',
@@ -20,6 +21,7 @@ export class IssuedBooksComponent implements OnInit {
   column = ['image', 'BookName', 'author', 'imageUrl'];
   users: Requestbook[] = [];
   ids: Adminaddbook;
+ 
   constructor(
     private service: BooksService,
     private adminservice: AdminaddbookService, private dialog:MatDialog,
@@ -30,7 +32,7 @@ export class IssuedBooksComponent implements OnInit {
 
   ngOnInit(): void {
   
-    this.adminservice.getAdminBook().subscribe((response) => {
+    this.adminservice.issuedBook().subscribe((response) => {
     this.users = response;
       console.log(this.users);
     });

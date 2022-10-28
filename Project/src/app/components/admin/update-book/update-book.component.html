@@ -1,3 +1,73 @@
+<!-- <div  >
+  <div class="widthad"  >
+    <mat-card  >
+      <form [formGroup]="forms" (ngSubmit)="onEdit(forms.value)"  >
+        <h2>Edit Book</h2>
+
+        <mat-form-field>
+          <input matInput placeholder="Enter Book Name"  formControlName="BookName" />
+      
+          <mat-error>
+            <span *ngIf="!forms.get('BookName')?.valid && forms.get('BookName')?.touched">Name Required</span>
+       <p>result</p>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="text" matInput placeholder="Add image url" formControlName="ImageUrl"/>
+          <mat-error> <span *ngIf="!forms.get('image')?.valid && forms.get('image')?.touched">image Required</span >
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Enter Author Name"
+            formControlName="AuthorName"
+          />
+
+          <mat-error>
+            <span *ngIf="!forms.get('Author')?.valid && forms.get('Author')?.touched">Author name Required</span>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="date" formControlName="Date" />
+          <mat-error>
+            <span
+              *ngIf="!forms.get('Date')?.valid && forms.get('Date')?.touched">Date Required</span>
+          </mat-error>
+        </mat-form-field>
+
+        <div class="button-row">
+          <button matTooltip=" Click to Update" type="submit"
+            mat-flat-button
+            color="primary"
+            type="submit"
+            [disabled]="!forms.valid"
+          >
+          
+            <span >Update</span>
+           
+          </button>
+        </div>
+        <div class="reset">
+          <button type="button" (click)="forms.reset()">
+            <span class="material-icons-outlined"> Reset </span>
+          </button>
+        </div>
+        <div mat-dialog-actions>
+          <button mat-button mat-dialog-close>Close</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div> -->
+
+
+
+
+
 <div>
   <div class="widthad">
     <mat-card>
@@ -17,7 +87,7 @@
             type="text"
             matInput
             placeholder="Add image url"
-            formControlName="image"
+            formControlName="ImageUrl"
           />
           <mat-error>
             <span
@@ -28,11 +98,7 @@
         </mat-form-field>
 
         <mat-form-field>
-          <input
-            matInput
-            placeholder="Enter Author Name"
-            formControlName="Author"
-          />
+          <input matInput placeholder="Enter Author Name"  formControlName="AuthorName"/>
 
           <mat-error>
             <span *ngIf="!forms.get('Author')?.valid && forms.get('Author')?.touched">Author name Required</span>

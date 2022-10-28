@@ -27,7 +27,8 @@ export class AddbookComponent implements OnInit {
       AuthorName:['',Validators.required],     
       Date:[Date,Validators.required],
       ImageUrl:['', Validators.required],
-      BookId:[],     
+      BookId:[],    
+       
      
     })
   }
