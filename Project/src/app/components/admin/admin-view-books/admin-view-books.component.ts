@@ -16,8 +16,8 @@ export class AdminViewBooksComponent implements OnInit {
     ngOnInit(): void {
       // this.service.getusers().subscribe((response)=>{
       //   this.users=response;
-      this.service.getAdminBook().subscribe((response)=>{
-        this.users=response;
-      })
+      // this.service.getAdminBook().subscribe((response)=>{
+      //   this.users=response;
+      // })
     }
 }

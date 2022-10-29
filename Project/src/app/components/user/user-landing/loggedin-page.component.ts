@@ -13,16 +13,20 @@ import { Adminaddbook } from 'src/app/model/adminaddbook.model';
   styleUrls: ['./loggedin-page.component.css']
 })
 export class LoggedinPageComponent implements OnInit {
-name=localStorage.getItem('username')
+
+  name:any;
   constructor(private dialog:MatDialog,private service:BooksService,private adminservice: AdminaddbookService,private router:Router) { }
   users: Adminaddbook[] = [];
   term:string=" ";
   confirm:string="Cancel";
   ngOnInit(): void {
-    this.adminservice.getAdminBook().subscribe((response) => {
-      this.users = response;
-      console.log(this.users);
-    });
+    // this.adminservice.getAdminBook().subscribe((response) => {
+    //   this.users = response;
+    //   console.log(this.users);
+  
+    // });
+    this.name=sessionStorage.getItem('Name');
+    console.log(this.name);
   }
   
   openDialog() {

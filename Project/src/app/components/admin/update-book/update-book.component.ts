@@ -196,14 +196,17 @@ export class UpdateBookComponent implements OnInit {
     this.services.editAdminBook(this.editId, this.forms.value).subscribe(response=>{
       this.updatebooks=response
       console.log(this.updatebooks);
-     // this.matdialog.closeAll();
-      this.forms.reset();
-      let currentUrl=this.route.url;
-      this.route.routeReuseStrategy.shouldReuseRoute = () => false;
-      this.route.onSameUrlNavigation = 'reload';
-      this.route.navigate([currentUrl]);
+  
+      //this.forms.reset();
+
+
+      // let currentUrl=this.route.url;
+      // this.route.routeReuseStrategy.shouldReuseRoute = () => false;
+      // this.route.onSameUrlNavigation = 'reload';
+      // this.route.navigate([currentUrl]);
      
     });
+  
 
    this.toasterservice.showSuccess('Congratulations','updated successfully')
     let currentUrl=this.route.url;

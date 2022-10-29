@@ -16,14 +16,14 @@
         
           <mat-card-content>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" formControlName="name" required>
+              <input matInput placeholder="Username" formControlName="Name" required>
               <mat-error>
                 <span *ngIf="!data.get('id')?.valid && data.get('id')?.touched">User Name Required</span>
             </mat-error>
             </mat-form-field>
     
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Password" type="password" formControlName="password" required>
+              <input matInput placeholder="Password" type="password" formControlName="Password" required>
               <mat-error>
                 <span *ngIf="!data.get('password')?.valid && data.get('password')?.touched">User Name Required</span>
             </mat-error>

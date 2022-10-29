@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  adminAddurl:'http://localhost:3000/AdminAddbooks',
+  //adminAddurl:'http://localhost:3000/AdminAddbooks',
   baseUrl: 'http://localhost:3000/Books',
   reqbookurl: 'http://localhost:3000/reqbook',
   signupurl: 'http://localhost:3000/signupuser',

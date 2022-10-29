@@ -17,6 +17,11 @@ isAdmin=false;
 isUser=false;
 response:any;
 data:any;
+
+uRoleId=sessionStorage.getItem('RoleId');
+
+
+userId = sessionStorage.getItem('UserId');
   constructor(private http:HttpClient,private router:Router, private toastr:ToastrService) { }
 
 //   public authenticateEmployee(data:any)
@@ -95,62 +100,81 @@ data:any;
 userApiUrl=environment.userApiUrl;
 //baseApiUrl:'https://localhost:44381/api/User'
 
-public authenticateEmployee(data:any)
+public authenticateEmployee(data:any):Observable<any>
 {
-
+debugger;
   console.log(data);
-  return this.http.post(this.LoginApi,data).subscribe(respon=>{
-  console.log(respon);
-    this.user=respon;
-    console.log(this.user);
-    //this.data=data;
-    this.authenticateUser();
+  return this.http.post<any>(this.LoginApi,data);
+  // .subscribe(respo=>{
+  // console.log(respo);
+  //   this.user=respo;
+  //   console.log(this.user);
+  //   //this.data=data;
+  //  this.authenticateUser();
    
-    this.navigateUser();
-  })
+  //   this.navigateUser();
+  // })
 }
 
 authenticateUser()
 {
  
-  console.log(this.user);
+  console.log(this.user.RoleId);
   
   this.response=(this.user.find((x:any)=>{
     console.log(x.name);
-    return x.name==this.data.name && x.password==this.data.password
+    return x.name==this.user.Name && x.password==this.data.Password
  
 
   }))
 }
 
-navigateUser(){
-if(this.response)
-{
-  this.checkRole();
-  this.toastr.success('', 'Logged In Successfully', {
-    positionClass: 'toast-top-center'
-  });
-}
-else{
-  // alert ("Invalid Credential");
-  this.toastr.error('', 'Invalid Credentials', {
-    positionClass: 'toast-top-center'
-  });
+// navigateUser(){
+// if(this.response)
+// {
+//   this.checkRole();
+//   this.toastr.success('', 'Logged In Successfully', {
+//     positionClass: 'toast-top-center'
+//   });
+// }
+// else{
+//   // alert ("Invalid Credential");
+//   this.toastr.error('', 'Invalid Credentials', {
+//     positionClass: 'toast-top-center'
+//   });
 
-}
-}
+// }
+// }
+
+navigateUser(){
+  if(this.user)
+  {
+    this.checkRole();
+    this.toastr.success('', 'Logged In Successfully', {
+      positionClass: 'toast-top-center'
+    });
+  }
+  else{
+    // alert ("Invalid Credential");
+    this.toastr.error('', 'Invalid Credentials', {
+      positionClass: 'toast-top-center'
+    });
+  
+  }
+  }
+
 
 checkRole()
 {
   debugger;
 this.isAuthenticated=true;
-if(this.response.RoleId == '1')
+if(this.uRoleId == '1')
 {
   this.isAdmin=true;
   this.isAuthenticated=true;
   this.router.navigate(['/adminlanding']);
 }
-else if(this.response.RoleId == '2')
+else if(this.uRoleId  == '2')
 {
   this.isUser=true;
   this.isAuthenticated=true;

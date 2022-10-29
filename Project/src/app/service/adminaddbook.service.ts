@@ -21,7 +21,7 @@ export class  AdminaddbookService {
   }
     subject=new Subject();
 
-   adminaddurl=environment.adminAddurl; 
+   //adminaddurl=environment.adminAddurl; 
    baseUrlApi=environment.userApiUrl;
    BookApiUrl=environment.BookApiUrl;
    getAllBookDetailApiUrl=environment.getAllBookDetailApiUrl;
@@ -55,9 +55,9 @@ export class  AdminaddbookService {
      return this.http.post<requestedBook>(this.BookApiUrl,add.value);
    }
 
-  public getAdminBook(){
-    return this.http.get<any>(this.adminaddurl);
-  }
+  // public getAdminBook(){
+  //   return this.http.get<any>(this.adminaddurl);
+  // }
 
 
 //-----Using WEBAPI start ------//
