@@ -73,7 +73,7 @@ console.log(uRoleId);
   }
   checkRole() {
 var uRoleId=sessionStorage.getItem('RoleId');
-    debugger;
+    
     this.isAuthenticated=true;
     if(uRoleId == '1')
     {
@@ -96,16 +96,19 @@ var uRoleId=sessionStorage.getItem('RoleId');
   public userChecked():void {
     if (this.data) {
       this.storeUserInfo();
-      this.toastrService.success('Login Successfull', 'Success', { tapToDismiss: true });
+      this.toastrService.success('Login Successfullyyyhjkhjkjkkjk', 'Success', { tapToDismiss: true });
      //this.router.navigate(['userlanding']);
-    } else {
-      this.toastrService.error(' invalid email or password', 'Invalid Credentials', { tapToDismiss: true });
+    }
+     else {
+      console.log("hello from else");
+      this.toastrService.error('Invalid Credentials', 'warn', { tapToDismiss: true });
+      //this.toastrService.error(' invalid email or password', 'Invalid Credentials', { tapToDismiss: true });
     }
   }
 
 
   public storeUserInfo():void {
-        sessionStorage.setItem('UserId', this.userData.userDetails.userId);
+        localStorage.setItem('userId', this.userData.userDetails.userId);
         sessionStorage.setItem('Name', this.userData.userDetails.name);
         sessionStorage.setItem('RoleId', this.userData.userDetails.roleId);
         sessionStorage.setItem('token', this.userData.token);

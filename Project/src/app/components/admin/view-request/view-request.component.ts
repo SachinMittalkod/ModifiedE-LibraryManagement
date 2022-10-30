@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ColDef } from 'ag-grid-community';
 import { Requestbook } from 'src/app/model/requestbook.model';
 import { BooksService } from 'src/app/service/books.service';
+import { UserserviceService } from 'src/app/service/userservice.service';
 
 
 
@@ -16,12 +17,12 @@ import { BooksService } from 'src/app/service/books.service';
 
 export class ViewRequestComponent implements OnInit {
   i:number=0;
-  constructor(private service:BooksService, private route:Router) { }
+  constructor(private service:BooksService, private route:Router, private userservice:UserserviceService) { }
   book:Requestbook[]=[];
   term:any="";
   posthistory:any;
   ngOnInit(): void {
-  this.service.getrequest().subscribe(resp=>{
+  this.userservice.getUserRequest().subscribe(resp=>{
     this.book=resp;
     console.log(this.book);
   })

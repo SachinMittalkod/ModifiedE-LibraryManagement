@@ -10,10 +10,15 @@ import { Registration } from '../model/user.model';
 export class UserserviceService {
 
   userApiUrl=environment.userApiUrl;
+  UserRequestApiUrl=environment.UserRequestApiUrl;
   constructor(private http:HttpClient) { }
 
 
   public getAllRegisteredUsers():Observable<any>{
     return this.http.get<any>(this.userApiUrl);
+  }
+
+  public getUserRequest():Observable<any>{
+    return this.http.get<any>(this.UserRequestApiUrl)
   }
 }

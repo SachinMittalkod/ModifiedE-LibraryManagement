@@ -38,7 +38,7 @@
         <div class="form-outline">
           <input type="text" [(ngModel)]="term" placeholder="Search by book name" class="form-control" />
         </div>
-       
+       <form >
         <mat-card-content class="row" >
    
           <mat-card  
@@ -48,12 +48,13 @@
     
             <img appHighlight mat-card-lg-image src="{{item.imageUrl }}" />
             <mat-card-content>
-              {{ item.authorName}}
+             {{ item.authorName}}
+             {{ item.bookId}}
             </mat-card-content>
             <button  mat-raised-button color="primary" (click)="requestBook(item)">Request Book</button>
           </mat-card>
 
         </mat-card-content>
-       
+      </form>
       </div>
     </div>

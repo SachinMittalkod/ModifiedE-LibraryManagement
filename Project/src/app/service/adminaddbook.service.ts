@@ -67,10 +67,10 @@ public getAllBookDetails():Observable<Adminaddbook> {
   return this.http.get<Adminaddbook>(this.getAllBookDetailApiUrl);
 }
 
-public postUserRequestAPI(add:any):Observable<requestedBook>{
+public postUserRequestAPI(add:any):Observable<any>{
  debugger;
    console.log("from service"+ add.value);
-   return this.http.post<requestedBook>(this.PostUserRequestAPI,add.value);
+   return this.http.post<any>(this.PostUserRequestAPI,add);
  }
 
  public deleteAdminBook(Id:number){

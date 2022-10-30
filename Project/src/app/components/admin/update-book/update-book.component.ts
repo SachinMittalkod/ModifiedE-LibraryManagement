@@ -35,7 +35,7 @@ export class UpdateBookComponent implements OnInit {
   
   // }
 
-  constructor(private fb:FormBuilder, private service:BooksService, private route:Router,
+  constructor(private fb:FormBuilder, private service:BooksService, private route:Router, private dialogref:MatDialogRef<UpdateBookComponent>,
     private notifiservice:NotificationService, private services:AdminaddbookService, private toasterservice:NotificationService
   ) { 
     this.services.subject.subscribe(response=>{
@@ -209,6 +209,7 @@ export class UpdateBookComponent implements OnInit {
   
 
    this.toasterservice.showSuccess('Congratulations','updated successfully')
+   this.dialogref.close('Update')
     let currentUrl=this.route.url;
     this.route.routeReuseStrategy.shouldReuseRoute = () => false;
     this.route.onSameUrlNavigation = 'reload';

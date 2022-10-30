@@ -22,7 +22,7 @@ export const environment = {
   IssuedBookApiUrl:'https://localhost:44381/api/IssuedBook',
   LoginApi:'https://localhost:44381/api/Login/loginUser',
 
-
+ UserRequestApiUrl: 'https://localhost:44381/api/UserRequest'
   
   
 };
