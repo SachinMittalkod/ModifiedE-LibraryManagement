@@ -34,8 +34,8 @@ const routes: Routes = [
   {path:'adminlogin',canActivate:[GaurdGuard],component:AdminLoginComponent}, 
  
   {path:'login',component:UserloginComponent},  
-  {path:'userlanding', component:LoggedinPageComponent, children:[
-    // canActivate:[GaurdGuard], 
+  {path:'userlanding', component:LoggedinPageComponent,canActivate:[GaurdGuard],children:[
+    // 
     {path:'booklist', component:BooklistComponent},
     // {path:'availablebooks', component:IssuedBooksComponent},
     {path:'requesthistory' ,component:RequestHistoryComponent},
@@ -47,8 +47,8 @@ const routes: Routes = [
   {path:'addbook', component:AddbookComponent},
   {path:'register',component:RegisterPageComponent},
   {path:'update/:id', component:UpdateBookComponent},
-  {path:'adminlanding', component:AdminLandingPagesComponent, children:[
-    //canActivate:[GaurdGuard],
+  {path:'adminlanding', component:AdminLandingPagesComponent,canActivate:[GaurdGuard], children:[
+    //
     {path:'listofUsers', component:RegisteredUsersListComponent},
     {path:'adminlistbooks' , component:ListofadminbooksComponent},
     {path:'viewrequest', component:ViewRequestComponent},

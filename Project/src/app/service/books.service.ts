@@ -13,12 +13,7 @@ const baseUrl=environment.baseUrl;
   providedIn: 'root'
 })
 export class BooksService {
-  // baseUrl='http://localhost:3000/Books';
-  // reqbookurl='http://localhost:3000/reqbook'
-  // signupurl='http://localhost:3000/signupuser'
-  // adminurl='http://localhost:3000/admindata'
-  // adminaddbooks='http://localhost:3000/AdminAddbooks'
-  // requsetedhistory='http://localhost:3000/reqhistory'
+
    baseUrl=environment.baseUrl;
    reqbookurl=environment.reqbookurl;
    signupurl=environment.signupurl;
@@ -49,35 +44,12 @@ export class BooksService {
     this.http.get<any>(this.adminurl);
   }
 
-  public Authenticate(data:any){
-return this.http.get(this.adminurl).subscribe(resp=>{
-  this.admin=resp;
-  this.data=data;
-  this.autheticateuser();
-  this.navigateUser();
-})
-  }
 
- public autheticateuser(){
-    this.admin=this.admin.find((c:any)=>{
-      return c.adminid==this.data.adminid && c.AdminPassword ==this.data.AdminPassword
-    })
-  }
 
-  public navigateUser() {
-    if(this.admin){
-      this.checkrole()
-    }else{
-      alert("not admin")
-    }
-  }
+
+
+
   
-  checkrole() {
-    this.isAuthenticated=true;
-    if(this.admin.admin){
-      console.log(this.admin);
-    }
-  }
 
   public getadminid():Observable<any>{
     return this.http.get<any>(this.adminurl)
@@ -89,6 +61,7 @@ return this.http.get(this.adminurl).subscribe(resp=>{
   return  this.http.delete<Adminaddbook>(url)
   }
 
+//Using Web API
 
  public register(sign:any):Observable<Registration>{
   debugger;

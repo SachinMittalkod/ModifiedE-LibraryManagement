@@ -21,4 +21,10 @@ export class UserserviceService {
   public getUserRequest():Observable<any>{
     return this.http.get<any>(this.UserRequestApiUrl)
   }
+
+  public deleteUserRequest(id:number){
+    debugger
+ const apiurl=`${this.UserRequestApiUrl}/${id}`
+    return this.http.delete<any>(apiurl);
+  }
 }

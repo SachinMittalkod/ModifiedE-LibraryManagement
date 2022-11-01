@@ -23,12 +23,19 @@ export class AvailableBooksComponent implements OnInit {
   //user:Adminaddbook;
   user:any;
  
-   today = new Date();
-  dd = String(this.today.getDate()).padStart(2, '0');
-   mm = String(this.today.getMonth() + 1).padStart(2, '0'); //January is 0!
-   yyyy = this.today.getFullYear();
-  
-  todays = this.yyyy + '/' + this.mm + '/' + this.dd 
+  currentDate = new Date();
+  day = this.currentDate.getDate();
+  month = this.currentDate.getMonth() + 1;
+  year = this.currentDate.getFullYear();
+  hour = this.currentDate.getHours();
+  minute = this.currentDate.getMinutes();
+  seconds = this.currentDate.getSeconds();
+  // returndt = new Date(`${this.month} ${this.day+3},  ${this.year} ${this.hour}:${this.minute}+${this.seconds}`).getDate();
+  returndt = this.day + 5 + "/" + this.month + "/" + this.year
+  //returnDate = (this.year+'-'+this.month+'-'+(Number(this.day)+3)+'T'+this.hour+':'+this.minute+':'+this.seconds)
+  date = (this.year + '-' + this.month + '-' + (this.day) + 'T' + this.hour + ':' + this.minute + ':' + this.seconds)
+
+
   no:any=0;
   forms:FormGroup;
   //Form:any;
@@ -41,13 +48,14 @@ export class AvailableBooksComponent implements OnInit {
   formData:any;
   userzid:any;
     ngOnInit(): void {
-      console.log(this.todays);
+      console.log(this.date);
       console.log(this.uId);
        this.forms=this.fb.group({
        // bookName:['',Validators.required],
         bookId:['',Validators.required],
         userId:['', Validators.required],
-        date:['', Validators.required],
+        date:['', Validators.required]
+       //returnDate: [this.returndt],
        // authorName:['', Validators.required]
        })
        this.getAllBooks();
@@ -80,8 +88,9 @@ export class AvailableBooksComponent implements OnInit {
     
       this.forms.controls['bookId'].setValue(data.bookId);
      
-      this.forms.controls['date'].setValue(this.todays);
-      this.forms.controls['userId'].setValue(this.uId)
+      this.forms.controls['date'].setValue(this.date);
+      this.forms.controls['userId'].setValue(this.uId);
+      //this.forms.controls['returnDate'].setValue(this.returndt);
       this.sendRequest(this.count);
       this.count++;
       console.log(this.forms.value)
@@ -111,11 +120,12 @@ export class AvailableBooksComponent implements OnInit {
         //         });
         //       }
         //     })
-        this.adminservice.postUserRequestAPI(this.forms.value).subscribe(respo=>{
-          this.toastr.success("Sucessfully Book Requested")
+        this.adminservice.postUserRequest(this.forms.value).subscribe(respo=>{
+          
          // alert("Book has been requested")
           console.log(respo);
         })
+        this.toastr.success("Sucessfully Book Requested")
        
       }
     }

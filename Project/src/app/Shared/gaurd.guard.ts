@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+import { UserloginComponent } from '../components/user/userlogin/userlogin.component';
 import { AuthService } from '../service/auth.service';
 import { BooksService } from '../service/books.service';
 
@@ -8,7 +9,7 @@ import { BooksService } from '../service/books.service';
   providedIn: 'root'
 })
 export class GaurdGuard implements CanActivate {
-  //roleId = sessionStorage.getItem('role');
+   //roleId = sessionStorage.getItem('role');
   constructor(private authservices:AuthService, private router:Router){}
   
 
@@ -23,9 +24,7 @@ export class GaurdGuard implements CanActivate {
         return true;
     
            }
-          // if (sessionStorage.getItem('isLoggedIn') == 'true') {
-          //   return true;
-          // }
+       
     
           else if(this.authservices.isUser){
     

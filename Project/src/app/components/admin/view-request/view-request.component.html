@@ -4,12 +4,12 @@
  
 
   <mat-card class="column" *ngFor="let item of book | filter:term" class="col-md-2" fxLayoutGap="4px" style="margin-left: 4rem ;">
-        <mat-card-title>{{item.BookName}}</mat-card-title>
+        <mat-card-title>{{item.bookName}}</mat-card-title>
         <img mat-card-lg-image src={{item.imageUrl}} >
         <mat-card-content>
           {{item.authorName}}
         </mat-card-content>
-        <button mat-button><span class="material-symbols-outlined" (click)="delete(item.id)">delete</span></button>
+        <button mat-button><span class="material-symbols-outlined" (click)="delete(item.requestId)">delete</span></button>
         <button mat-button><span class="material-symbols-outlined" style="color: blue;" (click)="accepted(item)">accept</span></button>
       </mat-card>
   </mat-card-content>
