@@ -102,7 +102,7 @@ export class AvailableBooksComponent implements OnInit {
     sendRequest(no: any) {
       debugger;
       if (no > 2) {
-        this.toastr.error('', '3 Request only', {
+        this.toastr.error('', 'You can request only 3 books', {
           positionClass: 'toast-top-center'
         });
       }
@@ -111,15 +111,7 @@ export class AvailableBooksComponent implements OnInit {
        
           console.log(this.forms.value);
           
-        //  this.requestapi.RequestBook(this.requestForm.value)
-        //     .subscribe({
-        //       next: (res) => {
-        //         this.reqBook = res;
-        //         this.toastr.success('', 'Request Sent !!', {
-        //           positionClass: 'toast-top-center'
-        //         });
-        //       }
-        //     })
+
         this.adminservice.postUserRequest(this.forms.value).subscribe(respo=>{
           
          // alert("Book has been requested")

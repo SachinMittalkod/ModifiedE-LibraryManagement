@@ -2,6 +2,7 @@ import { Component, Inject, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import {  MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 import { Adminaddbook } from 'src/app/model/adminaddbook.model';
 import { AdminaddbookService } from 'src/app/service/adminaddbook.service';
@@ -36,7 +37,7 @@ export class UpdateBookComponent implements OnInit {
   // }
 
   constructor(private fb:FormBuilder, private service:BooksService, private route:Router, private dialogref:MatDialogRef<UpdateBookComponent>,
-    private notifiservice:NotificationService, private services:AdminaddbookService, private toasterservice:NotificationService
+    private notifiservice:NotificationService, private services:AdminaddbookService, private toasterservice:NotificationService,private toastr:ToastrService
   ) { 
     this.services.subject.subscribe(response=>{
       this.editId=response;
@@ -208,7 +209,10 @@ export class UpdateBookComponent implements OnInit {
     });
   
 
-   this.toasterservice.showSuccess('Congratulations','updated successfully')
+   //this.toasterservice.showSuccess('Congratulations','Updated successfully')
+   this.toastr.success('', 'Updated Book successfully', {
+    positionClass: 'toast-top-center'
+  });
    this.dialogref.close('Update')
     let currentUrl=this.route.url;
     this.route.routeReuseStrategy.shouldReuseRoute = () => false;

@@ -57,12 +57,7 @@ export class ListofadminbooksComponent implements OnInit {
       this.route.onSameUrlNavigation = 'reload';
       this.route.navigate([currentUrl]);
 
-      //window.location.reload();
-      
-      // this.adminservice.getAdminBook().subscribe((response) => {
-      //   this.users = response;
-      //   console.log(this.users);
-      // });
+
       
    
 
@@ -71,21 +66,7 @@ export class ListofadminbooksComponent implements OnInit {
     
   }
 
-  // opendialog(id: any){
-  //   this.adminservice.editBookById(id).subscribe(resp=>{
-  //     this.updatedata=resp;
-  //     console.log(this.updatedata);
-      
-  // this.dialog.open(UpdateBookComponent, {
-  //   width:'450px',
-  //    data: { alldata: this.updatedata }
-  
-  // });
-  //   });
 
- 
-    
-  // }
 
   opendialog(id: any){
     this.dialog.open(UpdateBookComponent, {
